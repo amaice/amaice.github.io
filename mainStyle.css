@@ -118,8 +118,8 @@ a.cookie-link{
 }
 
 .close {
-    height: 2vw;
-    width: 2vw;
+    height: 25px;
+    width: 25px;
     background-color: #777;
     color: white;
     border-radius: 2px;
