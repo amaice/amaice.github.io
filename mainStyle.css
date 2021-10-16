@@ -100,14 +100,14 @@ td {
 
 .cookie-banner {
     position: fixed;
-    bottom: 40px;
-    left: 30vw;
-    width: 600px;
+    bottom: 4vw;
+    left: 20vw;
+    width: 60vw;
     padding: 5px 5px;
     background-color: #eee;
     border-radius: 5px;
     color: black;
-    font-size:18px;
+    font-size:3.5vw;
     text-align: center;
     align-items: center;
 }
