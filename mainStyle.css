@@ -92,12 +92,14 @@ td {
     bottom: 40px;
     left: 34%;
     right: 34%;
-    width: 45%;
+    width: 38%;
     padding: 10px 10px;
     background-color: #eee;
     border-radius: 5px;
     color: black;
     font-size:18px;
+    text-align: center;
+    align-items: center;
 }
 
 a.cookie-link{
