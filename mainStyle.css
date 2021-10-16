@@ -101,10 +101,9 @@ td {
 .cookie-banner {
     position: fixed;
     bottom: 40px;
-    left: 34%;
-    right: 34%;
-    width: 38%;
-    padding: 10px 10px;
+    left: 30vw;
+    width: 600px;
+    padding: 5px 5px;
     background-color: #eee;
     border-radius: 5px;
     color: black;
