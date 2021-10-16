@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Adobe Myungjo Std', Courier New, Courier, monospace;
-    background-image: url('background_clouds.png');
+    background-image: url('../Sprites/background_clouds.png');
     color: white;
     font-size: 18px;
 }
