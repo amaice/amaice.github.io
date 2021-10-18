@@ -2,7 +2,7 @@
 #kitty:focus {
   position: relative;
   animation-name: kitty_jump;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
 }
 
 @keyframes kitty_jump {
