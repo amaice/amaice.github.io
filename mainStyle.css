@@ -1,5 +1,9 @@
-﻿@import url('reset.css');
-@import url('flexBoxes.css');
+@font-face {
+    font-family: 'Adobe Myungjo Std';
+    src: url('../Sprites/Adobe Myungjo Std M.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal; 
+}
 
 body {
     font-family: 'Adobe Myungjo Std', Courier New, Courier, monospace;
