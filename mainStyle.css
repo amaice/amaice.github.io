@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Adobe Myungjo Std', Courier New, Courier, monospace;
+    src: url('../Sprites/Adobe Myungjo Std M.otf');
     background-image: url('../Sprites/background_clouds.png');
     color: white;
     font-size: 18px;
