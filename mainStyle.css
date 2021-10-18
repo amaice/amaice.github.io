@@ -1,8 +1,13 @@
 /*cool kitty animation*/
-#kitty:active {
+#kitty:focus {
   position: relative;
   animation-name: kitty_jump;
   animation-duration: 3s;
+}
+
+.kitty:active {
+  animation: none;
+  animation: none;
 }
 
 @keyframes kitty_jump {
