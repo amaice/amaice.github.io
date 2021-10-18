@@ -7,8 +7,3 @@
     });
 
 })
-
-
-$('#button').onClick(function(){
-    $('#kitty').addClass('animate_jump');
-});
