@@ -1,0 +1,10 @@
+v1.4
+
+-Fixed glitchy lines between tiles
+-Fixed wall jumps (kinda)
+-Added "elongate" gimmick
+-Added title screen
+-Added pause screen
+-Added useless tutorial
+-Added quick reset (it's "R")
+-Added dialog (At least the mechanic)
