@@ -2,15 +2,13 @@
 #kitty:active {
   position: relative;
   animation-name: kitty_jump;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
 @keyframes kitty_jump {
-  0%   {top:0px;}
-  25%  {top:40px;}
-  50%  {top:50px;}
-  75%  {top:30px;}
-  100% {top:0px;}
+  0%   {bottom:0px; animation-timing-function: ease-out;}
+  50%  {bottom:100px; animation-timing-function: ease-in;}
+  100% {bottom:0px;}
 }
 
 
