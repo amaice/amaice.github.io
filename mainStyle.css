@@ -5,11 +5,6 @@
   animation-duration: 3s;
 }
 
-.kitty:active {
-  animation: none;
-  animation: none;
-}
-
 @keyframes kitty_jump {
   0%   {bottom:0px; animation-timing-function: ease-out;}
   50%  {bottom:100px; animation-timing-function: ease-in;}
