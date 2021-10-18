@@ -1,3 +1,20 @@
+/*cool kitty animation*/
+#kitty:active {
+  position: relative;
+  animation-name: kitty_jump;
+  animation-duration: 2s;
+}
+
+@keyframes kitty_jump {
+  0%   {top:0px;}
+  25%  {top:40px;}
+  50%  {top:50px;}
+  75%  {top:30px;}
+  100% {top:0px;}
+}
+
+
+
 @font-face {
     font-family: 'Adobe Myungjo Std';
     src: url('../Sprites/Adobe Myungjo Std M.otf') format('opentype');
