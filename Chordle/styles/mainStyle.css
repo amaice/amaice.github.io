@@ -19,13 +19,20 @@ h1{
 	margin-left: 16px;
 }
 
-#info > * {
+#info > p {
 	font-size:20px;
 	text-align:center;
 	
 	margin-bottom: 16px;
 	margin-right: 16px;
 	margin-left: 16px;
+}
+
+#info > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
 rect:hover{
@@ -74,5 +81,4 @@ rect:active{
 	margin-right: 16px;
 	margin-left: 16px;
 }
-
 
