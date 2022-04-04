@@ -1,0 +1,78 @@
+@font-face{
+	font-family: LexendDeca;
+	src: url(https://fonts.gstatic.com/s/lexenddeca/v15/K2FifZFYk-dHSE0UPPuwQ7CrD94i-NCKm-U48M1wqxnD.woff2) format('woff2');
+}
+
+html, body {
+	background-color:rgb(24, 26, 27) !important;
+	color:rgb(244, 244, 255) !important;
+	font-family:LexendDeca;
+}
+
+h1{
+	font-size:40px;
+	text-align:center;
+
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-right: 16px;
+	margin-left: 16px;
+}
+
+p{
+	font-size:20px;
+	text-align:center;
+	
+	margin-bottom: 16px;
+	margin-right: 16px;
+	margin-left: 16px;
+}
+
+rect:hover{
+	filter: invert(40%);
+}
+
+rect:active{
+	filter: invert(60%);
+}
+
+.roundedCorner {
+	border-radius: 25px;
+	background: #28292a;
+	padding: 20px;
+	color:rgb(244, 244, 255) !important;
+	text-align:center;
+}
+
+#guesses, #buttons, #piano {
+	display: flex;
+	justify-content: center;
+}
+
+.gridCol {
+	width: 360px;
+	height: 360px;
+
+	display: grid;
+	grid-template-columns: 62px 62px 62px 62px 62px;
+	grid-template-rows:    62px 62px 62px 62px 62px;
+
+	grid-gap: 10px;
+	color: #444;
+
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-right: 16px;
+	margin-left: 16px;
+
+	justify-content: center;
+}
+
+#buttons > button {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-right: 16px;
+	margin-left: 16px;
+}
+
+

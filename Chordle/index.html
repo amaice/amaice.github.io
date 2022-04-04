@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="styles/reset.css" rel="stylesheet"/>
+		<link href="styles/mainStyle.css" rel="stylesheet"/>
+		
+		<link rel="icon" href="media/logo.png">
+		<title>Jazz Chordle</title>
+		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+	</head>
+<body>
+	<!--to display the notes/chords actually on the staff https://github.com/0xfe/vexflow/wiki/Using-EasyScore-->
+    <header>
+        <h1>Jazz Chordle</h1>
+    </header>
+		
+	<div id="piano">
+		<svg
+			width="507"
+			height="121"
+			id="piano">
+
+				<!-- 
+					 Copyright (c)  2005 Lauri Kaila.
+					 Permission is granted to copy, distribute and/or modify this document
+					 under the terms of the GNU Free Documentation License, Version 1.2
+					 or any later version published by the Free Software Foundation;
+					 with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+					 A copy of the license is included in the section entitled "GNU
+					 Free Documentation License".
+					 
+					 
+					 
+					 Intented to create a keyboard where key widths are
+					 accurately in position. 
+					 
+					 See http://www.mathpages.com/home/kmath043.htm
+					 for the math.
+					 
+					 This keyboard has following properties (x=octave width).
+					 1. All white keys have equal width in front (W=x/7).
+					 2. All black keys have equal width (B=x/12).
+					 3. The narrow part of white keys C, D and E is W - B*2/3
+					 4. The narrow part of white keys F, G, A, and B is W - B*3/4
+					 
+				-->
+				<!-- White keys Octave 1 -->
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="0.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key C"
+				   id="C3" />
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="23.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key D"
+				   id="D3" />
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="46.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key E"
+				   id="E3" />
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="69.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key F"
+				   id="F3" />
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="92.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key G"
+				   id="G3" />
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="115.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key A"
+				   id="A3" />
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="138.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key B"
+				   id="B3" />
+
+				<!-- Black keys Octave 1 -->
+				<rect
+				   style="fill:#000000;stroke:#000000"
+				   x="14.83333"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Db"
+				   id="Db3" />
+				<rect
+				   style="fill:#000000;stroke:#000000"
+				   x="42.16666"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Eb"
+				   id="Eb3" />
+				<rect
+				   style="fill:#000000;stroke:#000000"
+				   x="82.75"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Gb"
+				   id="Gb3" />
+				<rect
+				   style="fill:#000000;stroke:#000000"
+				   x="108.75"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Ab"
+				   id="Ab3" />
+				<rect
+				   style="fill:#000000;stroke:#000000"
+				   x="135.25"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Bb"
+				   id="Bb3" />
+				   
+				<!-- White Keys Octave 2 -->   
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="161.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key C"
+				   id="C4" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="184.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key D"
+				   id="D4" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="207.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key E"
+				   id="E4" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="230.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key F"
+				   id="F4" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="253.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key G"
+				   id="G4" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="276.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key A"
+				   id="A4" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="299.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key B"
+				   id="B4" />
+
+
+				<!-- Black Keys Octave 2 -->   
+				<rect
+				   style="fill:#000000;stroke:#000000"
+				   x="175.83333"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Db"
+				   id="Db4" /><rect
+				   style="fill:#000000;stroke:#000000"
+				   x="203.16666"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Eb"
+				   id="Eb4" /><rect
+				   style="fill:#000000;stroke:#000000"
+				   x="243.75"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Gb"
+				   id="Gb4" /><rect
+				   style="fill:#000000;stroke:#000000"
+				   x="269.75"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Ab"
+				   id="Ab4" /><rect
+				   style="fill:#000000;stroke:#000000"
+				   x="296.25"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Bb"
+				   id="Bb4" />
+
+				<!-- White Keys Octave 3 -->
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="322.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key C"
+				   id="C5" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="345.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key D"
+				   id="D5" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="368.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key E"
+				   id="E5" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="391.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key F"
+				   id="F5" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="414.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key G"
+				   id="G5" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="437.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key A"
+				   id="A5" /><rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="460.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key B"
+				   id="B5" />
+
+				<!-- Black Keys Octave 3 -->   
+				<rect
+				   style="fill:#000000;stroke:#000000"
+				   x="336.83334"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Db"
+				   id="Db5" /><rect
+				   style="fill:#000000;stroke:#000000"
+				   x="364.16666"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Eb"
+				   id="Eb5" /><rect
+				   style="fill:#000000;stroke:#000000"
+				   x="404.75"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Gb"
+				   id="Gb5" /><rect
+				   style="fill:#000000;stroke:#000000"
+				   x="430.75"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Ab"
+				   id="Ab5" /><rect
+				   style="fill:#000000;stroke:#000000"
+				   x="457.25"
+				   y="0.5"
+				   width="13"
+				   height="80"
+				   class="key Bb"
+				   id="Bb5" />
+
+				<!-- White Key Octave 4 -->   
+				<rect
+				   style="fill:#ffffff;stroke:#000000"
+				   x="483.5"
+				   y="0.5"
+				   width="23"
+				   height="120"
+				   class="key C"
+				   id="C6" />
+			</svg>
+	</div>
+		
+	<div id="buttons">
+		<button type="button" id="backspace">Backspace</button>
+		<button type="button" id="flip">Flip</button>
+		<button type="button" id="submit">Submit</button>
+	</div>
+	
+	<div id="guesses">
+		<div class="gridCol">
+		<!--<span id="1-1" class="roundedCorner"></span>-->
+		<span id="1-1" class="roundedCorner"></span>
+		<span id="1-2" class="roundedCorner"></span>
+		<span id="1-3" class="roundedCorner"></span>
+		<span id="1-4" class="roundedCorner"></span>
+		<span id="1-5" class="roundedCorner"></span>
+		<span id="2-1" class="roundedCorner"></span>
+		<span id="2-2" class="roundedCorner"></span>
+		<span id="2-3" class="roundedCorner"></span>
+		<span id="2-4" class="roundedCorner"></span>
+		<span id="2-5" class="roundedCorner"></span>
+		<span id="3-1" class="roundedCorner"></span>
+		<span id="3-2" class="roundedCorner"></span>
+		<span id="3-3" class="roundedCorner"></span>
+		<span id="3-4" class="roundedCorner"></span>
+		<span id="3-5" class="roundedCorner"></span>
+		<span id="4-1" class="roundedCorner"></span>
+		<span id="4-2" class="roundedCorner"></span>
+		<span id="4-3" class="roundedCorner"></span>
+		<span id="4-4" class="roundedCorner"></span>
+		<span id="4-5" class="roundedCorner"></span>
+		<span id="5-1" class="roundedCorner"></span>
+		<span id="5-2" class="roundedCorner"></span>
+		<span id="5-3" class="roundedCorner"></span>
+		<span id="5-4" class="roundedCorner"></span>
+		<span id="5-5" class="roundedCorner"></span>
+	</div>
+	</div>
+	
+	<div class="info">
+		<p>
+			Inspired by the <a href="https://www.chordle.synthase.cc/">original chordle</a>. You do not need to spell the chord correctly, each note just needs to be in the right octave and position.
+		</p>
+	</div>
+		
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="scripts/mainScript.js"></script>
+</body>
+</html>

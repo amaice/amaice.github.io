@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xml:space="preserve"
+   width="116"
+   height="121"
+   version="1.1"
+   id="svg150"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   inkscape:export-filename="C:\Users\amaice\Desktop\prog\Jazz Chordle\media\PianoKeyboard.png"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs154" /><sodipodi:namedview
+   id="namedview152"
+   pagecolor="#505050"
+   bordercolor="#ffffff"
+   borderopacity="1"
+   inkscape:pageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="1"
+   showgrid="false"
+   inkscape:zoom="4.7140452"
+   inkscape:cx="59.9273"
+   inkscape:cy="68.094384"
+   inkscape:window-width="1920"
+   inkscape:window-height="1001"
+   inkscape:window-x="-9"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg150"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0" />
+
+	<!-- 
+		 Copyright (c)  2005 Lauri Kaila.
+		 Permission is granted to copy, distribute and/or modify this document
+		 under the terms of the GNU Free Documentation License, Version 1.2
+		 or any later version published by the Free Software Foundation;
+		 with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+		 A copy of the license is included in the section entitled "GNU
+		 Free Documentation License".
+		 
+		 
+		 
+		 Intented to create a keyboard where key widths are
+		 accurately in position. 
+		 
+		 See http://www.mathpages.com/home/kmath043.htm
+		 for the math.
+		 
+		 This keyboard has following properties (x=octave width).
+		 1. All white keys have equal width in front (W=x/7).
+		 2. All black keys have equal width (B=x/12).
+		 3. The narrow part of white keys C, D and E is W - B*2/3
+		 4. The narrow part of white keys F, G, A, and B is W - B*3/4
+		 
+	-->
+
+	<!-- White keys Octave 1 -->
+	
+	
+	
+	
+	
+	
+	
+
+	<!-- Black keys Octave 1 -->
+	
+	
+	
+	
+	
+	   
+	<!-- White Keys Octave 2 -->   
+	
+
+
+	<!-- Black Keys Octave 2 -->   
+	
+
+	<!-- White Keys Octave 3 -->
+	
+
+	<!-- Black Keys Octave 3 -->   
+	
+
+	<!-- White Key Octave 4 -->   
+	
+<rect
+   style="fill:#ffffff;stroke:#000000"
+   x="0.5"
+   y="0.5"
+   width="23"
+   height="120"
+   id="C-3-7" /><rect
+   style="fill:#ffffff;stroke:#000000"
+   x="23.5"
+   y="0.5"
+   width="23"
+   height="120"
+   id="D-3-0" /><rect
+   style="fill:#55cccc;stroke:#000000;fill-opacity:1"
+   x="46.5"
+   y="0.5"
+   width="23"
+   height="120"
+   id="E-3-0" /><rect
+   style="fill:#ffffff;stroke:#000000"
+   x="69.5"
+   y="0.5"
+   width="23"
+   height="120"
+   id="F-3-9" /><rect
+   style="fill:#55c555;stroke:#000000;fill-opacity:1"
+   x="92.5"
+   y="0.5"
+   width="23"
+   height="120"
+   id="G-3-4" /><rect
+   style="fill:#55c555;stroke:#000000;fill-opacity:1"
+   x="14.833344"
+   y="0.5"
+   width="13"
+   height="80"
+   id="Db-3-2" /><rect
+   style="fill:#000000;stroke:#000000"
+   x="42.166656"
+   y="0.5"
+   width="13"
+   height="80"
+   id="Eb-3-0" /><rect
+   style="fill:#000000;stroke:#000000"
+   x="82.75"
+   y="0.5"
+   width="13"
+   height="80"
+   id="Gb-3-2" /><rect
+   style="fill:#000000;stroke:#000000;stroke-width:0.720577"
+   x="108.75"
+   y="0.5"
+   width="6.75"
+   height="80"
+   id="Ab-3-9" /></svg>
