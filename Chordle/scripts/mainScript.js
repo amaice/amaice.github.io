@@ -64,11 +64,6 @@ function submit(){
 	// valid guess must have all notes filled
 	if(x == COLUMNS){
 		answerNoteNames = answers[currentAnswer].map(string => string.slice(0, -1));
-		// if all correct
-		if(guesses[y].toString() == answers[currentAnswer].toString()){
-			win();
-		}
-		
 		for (let i = 0; i < COLUMNS; i++) {
 			var currentNote = guesses[y][i];
 			var currentNoteName = currentNote.slice(0, -1);
@@ -100,6 +95,11 @@ function submit(){
 				});
 			}
 		} 
+		
+		// if all correct
+		if(guesses[y].toString() == answers[currentAnswer].toString()){
+			win();
+		}
 		x = 0;
 		y++;
 	}
