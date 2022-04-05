@@ -7,14 +7,37 @@ guesses = [
 ];
 
 answers = [
-	['F3','C4','G4','A4','E5']
+	['F3','C4','G4','A4','E5'],	// Fmaj9 very open voicing - spirited away
+	['B3', 'Bb4', 'Db5', 'Eb5', 'Gb5'],	// Bmaj9 - giant steps
+	['C3', 'G3', 'D4', 'A4', 'E5'],	// stack of fifths
+	['Db3', 'G3', 'F4', 'B4', 'Eb5'],	// Db9b5
+	['E3', 'A3', 'D4', 'G4', 'B4'],	// Em11 - famous so what voicing
+	['Bb3', 'Eb4', 'C5', 'F5', 'A5'],	// Eb7#11
+	['F3', 'A3', 'Eb4', 'Ab4', 'Db5'],	// F7(#9, b13)
+	['Ab3', 'Db4', 'Gb4', 'B4', 'E5'],	// stack of fourths
+	['E3', 'G4', 'B4', 'Eb5', 'Gb5'],	// EmM9 - james bond
+	['Eb3', 'G4', 'Bb4', 'Db5', 'E5'],	// E7b9
+	['Ab4', 'Db5', 'Eb5', 'G5', 'Bb5'], // Am9sus4
+	['Gb3', 'E4', 'Ab4', 'Bb4', 'D5'],	// Gb9#5
+	['Db', 'Bb', 'E', 'G', 'C'],	// Petrushka chord but without the bass note cause it's a 6 note chord lol
+	['G3', 'F4', 'A3', 'C4', 'E4'],	// G13 - one of my favorite chords ever	
+	['D4', 'F4', 'Ab4', 'C5', 'E5'], // Dm9b5
+	['C3', 'Bb3', 'E4', 'Ab4', 'D5']	// C9#5
+	//['', '', '', '', '']	
 ];
 
 enharmonics = ['C#/Db',	'D#/Eb', 'F#/Gb', 'G#/Ab', 'A#/Bb'];
 
+var dayOfLaunch = new Date("04/03/2022");
+var today = new Date();
+
+var differenceInTime = today.getTime() - dayOfLaunch.getTime();
+var differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+
+// if 4 days since launch, choose 4th chord, use modulus to through chords infinitely
+var currentAnswer = differenceInDays % answers.length;
 var x = 0;
 var y = 0;
-var currentAnswer = 0;
 
 var COLUMNS = 5;
 
