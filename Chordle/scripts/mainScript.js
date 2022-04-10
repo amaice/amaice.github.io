@@ -94,10 +94,22 @@ function submit(){
 			
 			// if right position and right octave (green)
 			if(currentNote == answers[currentAnswer][i]){
-			  noteGuessBox.style.background=colorCorrect;
-			  document.getElementById(currentNote).style.fill = colorCorrect;
+				// if D4 is correct, set all other D's to gray
+				keys = document.getElementsByClassName(currentNoteName);
+				Array.prototype.forEach.call(keys, function(key) {
+					key.style.fill = colorWrong;
+				});
+				
+				noteGuessBox.style.background=colorCorrect;
+				document.getElementById(currentNote).style.fill = colorCorrect;
 			} 
 			// if wrong position but right octave (blue)
+				// if D4 is right octave, set all other D's to gray
+				keys = document.getElementsByClassName(currentNoteName);
+				Array.prototype.forEach.call(keys, function(key) {
+					key.style.fill = colorWrong;
+				});
+			
 			else if(answers[currentAnswer].includes(currentNote)){
 				noteGuessBox.style.background = colorRightOctave;
 				document.getElementById(currentNote).style.fill = colorRightOctave;
@@ -122,6 +134,7 @@ function submit(){
 		// if all correct
 		if(guesses[y].toString() == answers[currentAnswer].toString()){
 			win();
+			y = 99;	// set out of bounds because u won
 		}
 		x = 0;
 		y++;
@@ -130,6 +143,53 @@ function submit(){
 
 function win(){
 	alert("yay u win");
+}
+
+document.getElementById("share").addEventListener("click", share);
+function share(){
+	var msg = "";
+	
+	var square_list = document.querySelectorAll('.roundedSquare');
+	var square_array = [...square_list]; // convert to array
+	square_array.forEach(square => {
+		let color = square.style.color;
+		if(color == colorCorrect){
+			msg = msg.concat('gren');
+			alert("gren");
+		}
+		
+		/*
+		switch (square){
+			case colorCorrect:
+				msg = msg.concat('gren');
+				alert("gren");
+				break;
+			default:
+				msg += "gray";
+		}
+		*/
+	});
+	alert(msg);
+
+	
+	/*
+	document.querySelectorAll('.roundedSquare').forEach(item => {
+		if(item.style.background == colorCorrect){
+			alert("green");
+		}
+		
+		
+		switch (item){
+			case colorCorrect:
+				msg += 'gren';
+				alert("gren");
+				break;
+			default:
+				msg += "gray";
+		}
+	});
+	*/
+	
 }
 
 document.getElementById("flip").addEventListener("click", flip);
