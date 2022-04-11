@@ -104,13 +104,13 @@ function submit(){
 				document.getElementById(currentNote).style.fill = colorCorrect;
 			} 
 			// if wrong position but right octave (blue)
+			else if(answers[currentAnswer].includes(currentNote)){
 				// if D4 is right octave, set all other D's to gray
 				keys = document.getElementsByClassName(currentNoteName);
 				Array.prototype.forEach.call(keys, function(key) {
 					key.style.fill = colorWrong;
 				});
-			
-			else if(answers[currentAnswer].includes(currentNote)){
+				
 				noteGuessBox.style.background = colorRightOctave;
 				document.getElementById(currentNote).style.fill = colorRightOctave;
 			} 
