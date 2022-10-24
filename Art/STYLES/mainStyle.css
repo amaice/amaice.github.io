@@ -1,0 +1,113 @@
+﻿@import url('reset.css');
+@import url('flexBoxes.css');
+
+body {
+    font-family: 'Adobe Myungjo Std', Courier New, Courier, monospace;
+    background-image: url('../MEDIA/backgroundmaybe.PNG');
+    color: white;
+    font-size: 14px;
+}
+
+.main-text{
+    text-indent:50px;
+}
+
+h1{
+    font-size:3.5vw;
+    font-weight:bold;
+    text-align:center;
+}
+
+h2 {
+    font-size: 2.5vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.responsive-header {
+    max-width: 100%;
+    height: auto;
+    width: 50%;
+}
+
+.responsive{
+    max-width:100%;
+    height:auto;
+}
+
+#logo {
+    float:left;
+}
+
+#logo2 {
+    float: right
+}
+
+header, footer {
+    background-color: black;
+    margin: 15px 15px 15px 15px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+ul > a > li {
+    padding:3px;
+}
+
+li {
+    text-align: center;
+    background-image: repeating-linear-gradient(#050a24, black);
+    border: 1.5px solid white;
+}
+
+li:hover {
+    background-image: repeating-linear-gradient(#7842f5, black);
+    font-weight: bold;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+table{
+    width:100%;
+}
+
+td {
+    width: 30vw;
+    height: 30vw;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 5px 5px 5px;
+}
+
+#errorMessage{
+
+    color:red;
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 40px;
+    left: 34%;
+    right: 34%;
+    width: 38%;
+    padding: 10px 15px;
+    background-color: #eee;
+    border-radius: 5px;
+    color: black;
+}
+
+a.cookie-link{
+    color:blue;
+    font-weight:bold;
+}
+
+.close {
+    height: 2vw;
+    width: 2vw;
+    background-color: #777;
+    color: white;
+    border-radius: 2px;
+}

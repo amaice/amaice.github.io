@@ -1,0 +1,15 @@
+﻿body {
+    background-image: url('../MEDIA/MOSHED-2021-3-25-9-52-38.gif');
+    text-shadow:60px 60px 3px #ffffff;
+    padding:10px;
+}
+
+p {
+    background-color: yellow;
+}
+
+#asideimage{
+    float:right;
+    width:30%;
+    height:auto;
+}

@@ -1,0 +1,108 @@
+﻿.board-and-clock{
+    display:flex;
+    flex-flow:row nowrap;
+}
+
+.clock{
+    align-self:center;
+    float:left;
+    width:190px;
+    margin:20px;
+}
+
+#chessboard > div:nth-child(odd) > div:nth-child(odd),
+#chessboard > div:nth-child(even) > div:nth-child(even) {
+    background-color: #f0dab5;
+}
+
+#chessboard > div:nth-child(even) > div:nth-child(odd),
+#chessboard > div:nth-child(odd) > div:nth-child(even) {
+    background-color: #b58763;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*file*/
+#chessboard {
+    display: flex;
+    flex-flow: nowrap row;
+    height: 400px;
+    margin: 10px;
+}
+
+.fullboard {
+    margin: 10px;
+    width: 400px;
+}
+
+/*rank*/
+#chessboard > div {
+    display: flex;
+    flex-flow: nowrap column;
+}
+
+.topplayer, .bottomplayer {
+    margin: 10px;
+    width:400px;
+}
+
+.playericon, .playername, .playerclock{
+
+}
+
+.playericon {
+    align-self: center;
+    flex: 1;
+    margin: 0px 7px 0px 0px;
+}
+
+.playericon > img {
+    height: 40px;
+    width: 40px;
+    display: block;
+}
+
+.playername{
+    flex:5;
+}
+
+.playerclock {
+    flex: 3;
+}
+
+.whitetimer > div,
+.blacktimer > div {
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    width:120px;
+}
+
+.blacktimer > div {
+    background-color: #26211b;
+    color: #f2e9ec;
+}
+
+.whitetimer > div {
+    background-color: #f2e9ec;
+    color: #26211b;
+
+}
+
+.topplayer, .bottomplayer{
+    display:flex;
+    flex-flow:nowrap row;
+    justify-items:stretch;
+}
+

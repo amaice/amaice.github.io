@@ -1,0 +1,13 @@
+﻿.flex-container {
+    background-color: black;
+    margin: 15px 15px 15px 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+.flex-container > div {
+    background-image: repeating-linear-gradient(#050a24, black);
+    margin: 5px 5px 5px 5px;
+}
+
