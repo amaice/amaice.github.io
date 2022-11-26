@@ -19,7 +19,7 @@ answers = [
 	['Eb3', 'G4', 'Bb4', 'Db5', 'E5'],	// E7b9
 	['Ab4', 'Db5', 'Eb5', 'G5', 'Bb5'], // Am9sus4
 	['Gb3', 'E4', 'Ab4', 'Bb4', 'D5'],	// Gb9#5
-	['Db', 'Bb', 'E', 'G', 'C'],	// Petrushka chord but without the bass note cause it's a 6 note chord lol
+	['Db3', 'Bb4', 'E4', 'G4', 'C5'],	// Petrushka chord but without the bass note cause it's a 6 note chord lol
 	['G3', 'F4', 'A3', 'C4', 'E4'],	// G13 - one of my favorite chords ever	
 	['D4', 'F4', 'Ab4', 'C5', 'E5'], // Dm9b5
 	['C3', 'Bb3', 'E4', 'Ab4', 'D5']	// C9#5
