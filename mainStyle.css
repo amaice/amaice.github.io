@@ -142,3 +142,15 @@ a.cookie-link{
     color: white;
     border-radius: 2px;
 }
+
+/* Sidebar/left column */
+.row1 {
+  flex: 30%;
+  padding: 20px;
+}
+
+/* Main column */
+.row2 {
+  flex: 70%;
+  padding: 20px;
+}
