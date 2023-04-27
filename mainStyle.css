@@ -11,6 +11,9 @@
   100% {bottom:0px;}
 }
 
+.flex-container {
+  display: flex;
+}
 
 
 @font-face {
