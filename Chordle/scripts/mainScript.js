@@ -22,7 +22,8 @@ answers = [
 	['Db3', 'Bb4', 'E4', 'G4', 'C5'],	// Petrushka chord but without the bass note cause it's a 6 note chord lol
 	['G3', 'F4', 'A4', 'C5', 'E5'],	// G13 - one of my favorite chords ever	
 	['D4', 'F4', 'Ab4', 'C5', 'E5'], // Dm9b5
-	['C3', 'Bb3', 'E4', 'Ab4', 'D5']	// C9#5
+	['C3', 'Bb3', 'E4', 'Ab4', 'D5'],	// C9#5
+	['G3', 'Bb3', 'Db4', 'F4', 'Gb5']	// the jp chord (Gm7b5b9)
 	//['', '', '', '', '']	
 ];
 
