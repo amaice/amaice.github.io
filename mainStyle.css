@@ -23,6 +23,13 @@
     font-style: normal; 
 }
 
+@font-face {
+    font-family: 'Pumpkin Cheesecake';
+    src: url('../Sprites/PumpkinCheesecake.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
 body {
     font-family: 'Adobe Myungjo Std', Courier New, Courier, monospace;
     background-image: url('../Sprites/background_clouds.png');
