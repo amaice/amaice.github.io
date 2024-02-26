@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'ONCEINAWHILE';
-    src: url('/fonts/ONCEINAWHILE.ttf') format('truetype'); 
+    src: url('/fonts/ONCEINAWHILE.TTF') format('truetype'); 
     font-weight: normal;
     font-style: normal; 
 }
