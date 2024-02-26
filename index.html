@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title>amaice</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="mainScript.js"></script>
-    <link href="mainStyle.css" rel="stylesheet" />
+    <link href="/mainStyle.css" rel="stylesheet" />
     <link rel="icon" href="/Sprites/cat.png">
     <!-- < <link href="STYLES/RWD.css" rel="stylesheet" /> -->
 
@@ -20,33 +20,61 @@
 
 <body>
     <header>
-        <h1 style="text-align:center">welcome to amaice studios</h1>
+        <h1 style="text-align:center"><a href="/index.html">welcome to amaice studios</a></h1>
     </header>
 
     <div class="flex-container">
 		<div class="row2">
-            <nav>
-                <ul>
-                    <a href="#"><li>Home</li></a>
-					<a href="https://www.youtube.com/c/amaice" tabindex="0"><li>Check my Youtube!</li></a>
-					<a href="https://amaice.bandcamp.com/" tabindex="1"><li>Check my music!</li></a>
-					<a href="catdirectory.html" tabindex="2"><li>Play Cat Game</li></a>
-                    <a href="Chordle" tabindex="3"><li>Play Jazz Chordle</li></a>
-					<a href="Hilbert" tabindex="4"><li>Play Hilbert Cooking Deluxe (Demo)</li></a>
-					<a href="Art" tabindex="5"><li>Art Exhibit (2021)</li></a>
-					<a href="https://amaice.itch.io/igloo-girl" tabindex="6"><li>A garbage game i made in 2 days (2023)</li></a>
-					
-                    
-					<!-- <a href="page5.html"><li>My Chess Attempt</li></a>
-                    <a href="page6.html"><li>Actual Chess</li></a>
-                    <a href="page4.html"><li>About Us</li></a>  -->
-                </ul>
-            </nav>		
+            <ul id="nav">
+                <li>
+                    <a href="#">Lil' Games</a>
+                    <ul>
+                        <li><a href="Chordle">Play Jazz Chordle (2022)</a></li>
+                        <li><a href="Hilbert">Play Hilbert Cooking Deluxe (Demo) (2022)</a></li>
+                        <li><a href="https://amaice.itch.io/igloo-girl">A garbage game i made in 2 days (2023)</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">My good Games</a>
+                    <ul> 
+                        <li><a href="catdirectory.html">Play Cat Game (2021)</a></li>
+                        <li><a href="#">Mito Maul Maulness (Soon)</a></li>
+
+                    </ul>
+                </li>    
+                <li>
+                    <a href="#">Art gallery</a>
+                    <ul> 
+                        <li><a href="Art">Art Exhibit (2021)</a></li>
+                        <!--<li><a href="gallery/mito-archives/index.html">The Mito Archives (2022-present)</a></li>-->
+                    </ul>
+                </li>  
+                <li>
+                    <a href="#">Check my music!</a>
+                    <ul> 
+                        <li><a href="https://amaice.bandcamp.com/">Bandcamp!</a></li>
+                        <li><a href="https://open.spotify.com/artist/1h0Uv7H8czCxvEolyO3pgt?si=pewq8trzRAGzfcbNYOM4oQ">Spoofy!</a></li>
+
+                        <li>
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1h0Uv7H8czCxvEolyO3pgt?utm_source=generator&theme=0" width="450" height="170" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </li>  
+                    </ul>
+                </li>  
+                <li><a href="https://www.youtube.com/c/amaice">Check my Youtube!</a></li>
+
+
+
+                <!-- <a href="page5.html"><li>My Chess Attempt</li></a>
+                <a href="page6.html"><li>Actual Chess</li></a>
+                <a href="page4.html"><li>About Us</li></a>  -->
+            </ul>	
 		</div>
-		<div class="row1">
-				<img src="/Sprites/pfpnew.gif" alt="the amaice">
-				<h1>me!</h1>
-		</div>
+		
+    </div>
+    <div class="row1">
+        <img style="width: 300px" src="/Sprites/pfpnew.gif" alt="the amaice">
+        <h1 style="text-align: left">me!</h1>
+        <p class="codey_text">> Hi all. Welcome to my domain! Fun colors and wacky things! Please enjoy yourself and don't get lost</p>        
     </div>
 	<div>
             <h1>LOOK AT THJIS KITTY</h1>
@@ -57,14 +85,13 @@
 
     <div class='cookie-banner'>
         <p>
-            By using our website, you agree to our <a class="cookie-link" href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>cookie policy.</a><br />
-            (This doesn't actually do anything)
+            This website doesn't use <a class="cookie-link" href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>cookies</a>, so this will pop up every time.
             <button class="close">x</button>
         </p>
     </div>
 
     <footer>
-        Amy Funk Copyright 2021
+        © <span id="year"></span> by Amy Funk
     </footer>
 </body>
 </html>

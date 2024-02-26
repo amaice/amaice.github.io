@@ -15,26 +15,50 @@
   display: flex;
 }
 
+/* FONTS */
 
 @font-face {
     font-family: 'Adobe Myungjo Std';
-    src: url('../Sprites/Adobe Myungjo Std M.otf') format('opentype');
+    src: url('/fonts/Adobe Myungjo Std M.otf') format('opentype');
     font-weight: normal;
     font-style: normal; 
 }
 
 @font-face {
     font-family: 'Pumpkin Cheesecake';
-    src: url('../Sprites/PumpkinCheesecake.otf') format('opentype');
+    src: url('/fonts/PumpkinCheesecake.otf') format('opentype');
     font-weight: normal;
     font-style: normal; 
 }
 
+@font-face {
+    font-family: 'LadylikeBB';
+    src: url('/fonts/LadylikeBB.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'ONCEINAWHILE';
+    src: url('/fonts/ONCEINAWHILE.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Comic Mono';
+    src: url('/fonts/ComicMono.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal; 
+}
+
+/* STUFF */
+
 body {
-    font-family: 'Adobe Myungjo Std', Courier New, Courier, monospace;
+    font-family: 'LadylikeBB', sans-serif;
     background-image: url('../Sprites/background_clouds.png');
     color: white;
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .main-text{
@@ -49,19 +73,25 @@ body {
 }
 
 h1, h2{
+    font-family: 'ONCEINAWHILE', sans-serif;
     text-shadow: 2px 2px black;   
-}
-
-h1{
-    font-size:3.5vw;
     font-weight:bold;
     text-align:center;
 }
 
+.codey_text{
+    font-family: 'Comic Mono', monospace;
+    background-color:black;
+    font-size: 20px;
+    padding: 8px;
+}
+
+h1{
+    font-size:3.5vw;
+}
+
 h2 {
     font-size: 2.5vw;
-    font-weight: bold;
-    text-align: center;
 }
 
 .responsive-header {
@@ -90,21 +120,6 @@ header, footer {
     text-align: center;
 }
 
-ul > a > li {
-    padding:3px;
-}
-
-li {
-    text-align: center;
-    background-image: repeating-linear-gradient(#050a24, black);
-    border: 1.5px solid white;
-}
-
-li:hover {
-    background-image: repeating-linear-gradient(#7842f5, black);
-    font-weight: bold;
-}
-
 a{
     text-decoration:none;
     color:white;
@@ -122,10 +137,87 @@ td {
     padding: 5px 5px 5px 5px;
 }
 
-#errorMessage{
-
-    color:red;
+/* Sidebar/left column */
+.row1 {
+  flex: 30%;
+  padding: 20px;
 }
+
+/* Main column */
+.row2 {
+  flex: 70%;
+  padding: 20px;
+}
+
+
+
+
+
+/* thank u granneman.com */
+
+#nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#nav li {
+  float: left;
+  display: block;
+  background: #4B4B4B;
+  position: relative;
+  z-index: 500;
+  margin: 0 1px;
+}
+
+#nav li a {
+  display: block;
+  padding: 6px 5px 0 5px;
+  font-weight: 700;
+  height: 35px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+#nav ul {
+  position: absolute;
+  left: 0;
+  display: none;
+  margin: 0 0 0 -1px;
+  padding: 0;
+  list-style: none;
+}
+
+#nav ul li {
+  float: left;
+  border-top: 1px solid #fff;
+  width: 100%;
+  white-space: nowrap;
+}
+
+#nav ul a {
+  display: block;
+  height: 35px;
+  padding:  6px 5px;
+  color: #fff;
+  text-align: left;
+}
+
+#nav a{
+    text-align: center;
+    background-image: repeating-linear-gradient(#050543, black);
+    border: 1.5px solid white;
+}
+
+#nav a:hover {
+    background-image: repeating-linear-gradient(#7842f5, black);
+    font-weight: bold;
+}
+
+
+
+/* POPUP */
 
 .cookie-banner {
     position: fixed;
@@ -151,16 +243,4 @@ a.cookie-link{
     background-color: #777;
     color: white;
     border-radius: 2px;
-}
-
-/* Sidebar/left column */
-.row1 {
-  flex: 30%;
-  padding: 20px;
-}
-
-/* Main column */
-.row2 {
-  flex: 70%;
-  padding: 20px;
 }
