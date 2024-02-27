@@ -56,7 +56,7 @@
 
 body {
     font-family: 'LadylikeBB', sans-serif;
-    background-image: url('../Sprites/background_clouds.png');
+    background-image: url('/media/background_clouds.png');
     color: white;
     font-size: 28px;
 }

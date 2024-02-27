@@ -1,0 +1,159 @@
+/*cool kitty animation*/
+#kitty:focus {
+  position: relative;
+  animation-name: kitty_jump;
+  animation-duration: 1.5s;
+}
+
+@keyframes kitty_jump {
+  0%   {bottom:0px; animation-timing-function: ease-out;}
+  50%  {bottom:100px; animation-timing-function: ease-in;}
+  100% {bottom:0px;}
+}
+
+.flex-container {
+  display: flex;
+}
+
+
+@font-face {
+    font-family: 'Adobe Myungjo Std';
+    src: url('/fonts/Adobe Myungjo Std M.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+body {
+    font-family: 'Adobe Myungjo Std', Courier New, Courier, monospace;
+    background-image: url('/media/background_clouds.png');
+    color: white;
+    font-size: 18px;
+}
+
+.main-text{
+    text-indent:50px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h1, h2{
+    text-shadow: 2px 2px black;   
+}
+
+h1{
+    font-size:3.5vw;
+    font-weight:bold;
+    text-align:center;
+}
+
+h2 {
+    font-size: 2.5vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.responsive-header {
+    max-width: 100%;
+    height: auto;
+    width: 50%;
+}
+
+.responsive, img{
+    max-width:100%;
+    height:auto;
+}
+
+#logo {
+    float:left;
+}
+
+#logo2 {
+    float: right
+}
+
+header, footer {
+    background-color: black;
+    margin: 15px 15px 15px 15px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+ul > a > li {
+    padding:3px;
+}
+
+li {
+    text-align: center;
+    background-image: repeating-linear-gradient(#050a24, black);
+    border: 1.5px solid white;
+}
+
+li:hover {
+    background-image: repeating-linear-gradient(#7842f5, black);
+    font-weight: bold;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+table{
+    width:100%;
+}
+
+td {
+    width: 30vw;
+    height: 30vw;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 5px 5px 5px;
+}
+
+#errorMessage{
+
+    color:red;
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 4vw;
+    left: 20vw;
+    width: 60vw;
+    padding: 5px 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    align-items: center;
+}
+
+a.cookie-link{
+    color:blue;
+    font-weight:bold;
+}
+
+.close {
+    height: 25px;
+    width: 25px;
+    background-color: #777;
+    color: white;
+    border-radius: 2px;
+}
+
+/* Sidebar/left column */
+.row1 {
+  flex: 30%;
+  padding: 20px;
+}
+
+/* Main column */
+.row2 {
+  flex: 70%;
+  padding: 20px;
+}
