@@ -1,0 +1,77 @@
+/*
+cool kitty animation
+*/
+#kitty:focus {
+  position: relative;
+  animation-name: kitty_jump;
+  animation-duration: 1.5s;
+}
+
+@keyframes kitty_jump {
+  0%   {bottom:0px; animation-timing-function: ease-out;}
+  50%  {bottom:100px; animation-timing-function: ease-in;}
+  100% {bottom:0px;}
+}
+
+
+/*
+scrolly
+*/
+.marquee{
+    transition: 0s linear;
+    transition-property: background-position;
+    animation: marquee 80s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -195% 0;
+  }
+}
+
+
+/*
+bouncy title letters
+*/
+@keyframes bounce1 {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+    80% {
+        transform: translateY(-5px);
+    }
+}
+
+.t1 {
+    display: inline-block;
+    animation: bounce1 2s infinite;
+}
+
+@keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(5px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+    80% {
+        transform: translateY(5px);
+    }
+}
+
+.t2 {
+    display: inline-block;
+    animation: bounce2 2s infinite;
+}

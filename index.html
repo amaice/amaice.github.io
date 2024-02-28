@@ -7,29 +7,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="mainScript.js"></script>
     <link href="/mainStyle.css" rel="stylesheet" />
+    <link href="/mainFonts.css" rel="stylesheet" />
+    <link href="/mainAnimations.css" rel="stylesheet" />    
     <link rel="icon" href="/media/cat.png">
-    <!-- < <link href="STYLES/RWD.css" rel="stylesheet" /> -->
-
-     <!-- <  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body>
-    <header>
-        <h1 id="title" style="text-align:center"><a href="/index.html">
-            <span class="t1">w</span><span class="t2">e</span><span class="t1">l</span><span class="t2">c</span><span class="t1">o</span><span class="t2">m</span><span class="t1">e</span>
-            <span class="t1">t</span><span class="t2">o</span>
-            <span class="t2">a</span><span class="t1">m</span><span class="t2">a</span><span class="t1">i</span><span class="t2">c</span><span class="t1">e</span>
-            <span class="t1">s</span><span class="t2">t</span><span class="t1">u</span><span class="t2">d</span><span class="t1">i</span><span class="t2">o</span><span class="t1">s</span></a>
+    <header class="marquee">
+        <h1 style="text-align:center"><a href="/index.html">
+            <!--welcome--><span class="t1">w</span><span class="t2">e</span><span class="t1">l</span><span class="t2">c</span><span class="t1">o</span><span class="t2">m</span><span class="t1">e</span>
+            <!--to--><span class="t1">t</span><span class="t2">o</span>
+            <!--amaice--><span class="t2">a</span><span class="t1">m</span><span class="t2">a</span><span class="t1">i</span><span class="t2">c</span><span class="t1">e</span>
+            <!--studios--><span class="t1">s</span><span class="t2">t</span><span class="t1">u</span><span class="t2">d</span><span class="t1">i</span><span class="t2">o</span><span class="t1">s</span></a>
         </h1>
     </header>
 
-    <div class="flex-container">
-		<div class="row2">
+    <div class="main-page">
+        <div style="display: flex">
             <ul id="nav">
                 <li>
                     <a href="#">Lil' Games</a>
@@ -43,14 +38,14 @@
                     <a href="#">My good Games</a>
                     <ul> 
                         <li><a href="games/catdirectory.html">Play Cat Game (2021)</a></li>
-                        <li><a href="#">Mito Maul Maulness (Soon)</a></li>
-
+                        <li><a href="#">Mito Maul Madness (Soon)</a></li>
                     </ul>
                 </li>    
                 <li>
                     <a href="#">Art gallery</a>
                     <ul> 
                         <li><a href="Art/index.html">Art Exhibit (2021)</a></li>
+                        <li><a href="oldPage/index.html">Old Main Page (2022)</a></li>
                         <!--<li><a href="gallery/mito-archives/index.html">The Mito Archives (2022-present)</a></li>-->
                     </ul>
                 </li>  
@@ -65,37 +60,59 @@
                         </li>  
                     </ul>
                 </li>  
-                <li><a href="https://www.youtube.com/c/amaice">Check my Youtube!</a></li>
-
 
 
                 <!-- <a href="page5.html"><li>My Chess Attempt</li></a>
                 <a href="page6.html"><li>Actual Chess</li></a>
                 <a href="page4.html"><li>About Us</li></a>  -->
             </ul>	
-		</div>
-		
-    </div>
-    <div class="row1">
-        <img style="width: 300px" src="/media/pfpnew.gif" alt="the amaice">
-        <h1 style="text-align: left">me!</h1>
-        <p class="codey_text">> Hi all. Welcome to my domain! Fun colors and wacky things! Please enjoy yourself and don't get lost</p>        
-    </div>
-	<div>
-            <h1>LOOK AT THJIS KITTY</h1>
-             <img src="../media/kitty.webp" alt="kitty!" id="kitty" class="center" tabindex="3"> 
-            <h2>FUN FACT: cats jump when spook</h2>
         </div>
 
+        <div class="amaice-container">
+            <br>
+            <img style="width: 300px" src="/media/pfpnew.gif" alt="the amaice">
+            <h1 style="text-align: left">me!</h1>
+        </div>
 
-    <div class='cookie-banner'>
-        <p>
-            This website doesn't use <a class="cookie-link" href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>cookies</a>, so this will pop up every time.
-            <button class="close">x</button>
-        </p>
+        <div id="conversation-container">
+            <p class="codey-text">> Hi all. Welcome to my domain of fun colors and wacky things! Please enjoy yourself and don't get lost</p>
+            <button id="thanksButton" onclick="handleResponse('thanks weird girl')">thanks weird girl</button>
+            <button id="getLostButton" onclick="handleResponse('im definitely going to get lost')">im definitely going to get lost</button>
+
+        </div>
+
+        <div class="youtube-container">
+            <br> 
+            <br> 
+            <br> 
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Qx9yN-DYXcg?si=r2xb9tx_i8blpTvb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <ul id="nav" style="padding-left:100px">
+                <li>
+                    <a href="https://www.youtube.com/c/amaice">Check my Youtube!</a>
+                    <ul>    
+                        <li><iframe width="560" height="315" src="https://www.youtube.com/embed/Qx9yN-DYXcg?si=r2xb9tx_i8blpTvb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="kitty-container">
+            <br> 
+            <h1>LOOK AT THJIS KITTY</h1>
+             <img src="../media/kitty.webp" tabindex="0" alt="kitty!" id="kitty" class="center"> 
+            <h2>FUN FACT: cats jump when spook</h2>
+        </div>
+        
+        <div class='cookie-banner'>
+            <p>
+                This website doesn't use <a class="cookie-link" href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>cookies</a>, so this will pop up every time.
+                <button class="close">x</button>
+            </p>
+        </div>
     </div>
-
-    <footer>
+    
+    <footer class="marquee" style="text-shadow: 1px 1px black">
         © <span id="year"></span> by Amy Funk
     </footer>
 </body>
