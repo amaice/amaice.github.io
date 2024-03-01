@@ -1,3 +1,7 @@
+:root {
+  --response-color: greenyellow;
+}
+
 body {
     font-family: 'LadylikeBB', sans-serif;
     background-image: url('/media/background_clouds.png');
@@ -33,13 +37,12 @@ h2 {
 
 .codey-text, .codey-text-response{
     font-family: 'Comic Mono', monospace;
-    background-color:black;
     font-size: 20px;
-    padding: 8px 8px 2px;
+    padding: 8px 8px 0px;
 }
 
 .codey-text-response{
-    color: greenyellow;
+    color: var(--response-color);
 }
 
 header, footer {
@@ -61,11 +64,11 @@ a{
 
 
 
-#conversation-container button{
+#conversation-container button, .conversationButton{
     font-family:"Pumpkin Cheesecake", sans-serif;
     font-size: 24px;
     float:left; 
-    margin-right: 4px;
+    margin-right: 10px;
 }
 
 
