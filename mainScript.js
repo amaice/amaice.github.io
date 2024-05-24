@@ -32,7 +32,7 @@
         
         var conversationContainer = document.getElementById('conversation-container');        
         
-        //<p id="conversation" class="codey-text">> Hi all. Welcome to my domain of fun colors and wacky things! Please enjoy yourself and don't get lost</p>
+        //<p id="amaice-hello" class="codey-text">> Hi all. Welcome to my domain of fun colors and wacky things! Please enjoy yourself and don't get lost ^^</p>
         var hello = document.createElement('p');
         hello.className = "codey-text";
         hello.id = "amaice-hello";
@@ -63,7 +63,7 @@
     
         
     function handleResponse(responseText) { 
-        // hey stop looking at the dialogue
+        // hey stop cheating
         let items = [
             ["thanks weird girl", "you're welcome !!", "sorry for calling you weird, it was just a dialogue option", "bye"],
             ["im definitely going to get lost", "oh well. that just means you'll have to be with me forever :)", "that sounds awful", "that sounds great"],
@@ -147,15 +147,12 @@
         }
     }
     
-    // for the two first diologue button options
-    var thanksButton = document.getElementById('thanksButton');
-    var getLostButton = document.getElementById('getLostButton');
-
-    thanksButton.addEventListener('click', function () {
-        handleResponse('thanks weird girl');
-    });
-
-    getLostButton.addEventListener('click', function () {
-        handleResponse('im definitely going to get lost');
+    
+    
+    // for the first dialogue buttons
+    document.querySelectorAll('.firstConversationButton').forEach(button => {
+        button.addEventListener('click', function () {
+            handleResponse(button.textContent);
+        });
     });
 });
