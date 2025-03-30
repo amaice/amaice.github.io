@@ -2,15 +2,40 @@
   --response-color: greenyellow;
 }
 
+/*ABOUT ME*/
+#qna > p{
+    text-shadow: #050a24 2px 2px;
+    background: repeating-linear-gradient(
+            45deg,
+            #b13446,
+            #b13446 20px,
+            #dd4733 20px,
+            #dd4733 80px
+    );
+}
+
+#qna > p:nth-child(4n+3) {
+    background: repeating-linear-gradient(
+            -45deg,
+            #b13446,
+            #b13446 20px,
+            #dd4733 20px,
+            #dd4733 80px
+    );
+}
+
+#qna > h2 {
+    text-align: left;
+}
 
 
+/*MAIN*/
 body {
     font-family: 'LadylikeBB', sans-serif;
     background-image: url('media/background_clouds.png');
     color: white;
     font-size: 28px;
 }
-
 body > div{
     padding: 0px 15px 15px 15px;
 }
