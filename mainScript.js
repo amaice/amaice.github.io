@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     // Load navigation first
-    $("#header-placeholder").load("header.html", function () {
+    $("#header-placeholder").load("/header.html", function () {
         // Submenus
         $('.nav li').mouseenter(function () {
             $(this).children('ul').stop(true, true).slideDown("fast");
