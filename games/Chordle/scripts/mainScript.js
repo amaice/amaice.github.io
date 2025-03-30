@@ -37,7 +37,7 @@ var differenceInTime = today.getTime() - dayOfLaunch.getTime();
 var differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
 
 // if 4 days since launch, choose 4th chord, use modulus to through chords infinitely
-var currentAnswer = 12
+var currentAnswer = differenceInDays % answers.length;
 var x = 0;
 var y = 0;
 
