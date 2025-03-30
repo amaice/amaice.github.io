@@ -2,35 +2,35 @@
 
 @font-face {
     font-family: 'Adobe Myungjo Std';
-    src: url('/media/fonts/Adobe Myungjo Std M.otf') format('opentype');
+    src: url('media/fonts/Adobe Myungjo Std M.otf') format('opentype');
     font-weight: normal;
     font-style: normal; 
 }
 
 @font-face {
     font-family: 'Pumpkin Cheesecake';
-    src: url('/media/fonts/PumpkinCheesecake.otf') format('opentype');
+    src: url('media/fonts/PumpkinCheesecake.otf') format('opentype');
     font-weight: normal;
     font-style: normal; 
 }
 
 @font-face {
     font-family: 'LadylikeBB';
-    src: url('/media/fonts/LadylikeBB.otf') format('opentype');
+    src: url('media/fonts/LadylikeBB.otf') format('opentype');
     font-weight: normal;
     font-style: normal; 
 }
 
 @font-face {
     font-family: 'ONCEINAWHILE';
-    src: url('/media/fonts/ONCEINAWHILE.TTF') format('truetype');
+    src: url('media/fonts/ONCEINAWHILE.TTF') format('truetype');
     font-weight: normal;
     font-style: normal; 
 }
 
 @font-face {
     font-family: 'Comic Mono';
-    src: url('/media/fonts/ComicMono.ttf') format('truetype');
+    src: url('media/fonts/ComicMono.ttf') format('truetype');
     font-weight: normal;
     font-style: normal; 
 }
