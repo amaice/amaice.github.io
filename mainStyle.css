@@ -126,7 +126,7 @@ a{
   margin: 0 1px;
 }
 
-.nav li a {
+.nav li a, .nav li div {
   display: block;
   padding: 6px 20px;
   font-weight: 700; /*bold*/
@@ -151,7 +151,7 @@ a{
   white-space: nowrap;
 }
 
-.nav ul a {
+.nav ul a, .nav ul div {
   display: block;
   font-weight: 400; /*normal*/
   padding:  6px 10px;
@@ -159,7 +159,7 @@ a{
   text-align: left;
 }
 
-.nav a{
+.nav a, .nav div{
     text-align: center;
     background-image: repeating-linear-gradient(#050543, black);
     border: 1.5px solid white;
