@@ -5,7 +5,7 @@
 /*ABOUT ME*/
 #qna > p{
     padding: 5px;
-    text-shadow: #050a24 2px 2px;
+    text-shadow: #050a24 1px 1px, #050a24 2px 2px;
     background: repeating-linear-gradient(
             45deg,
             #b13446,
@@ -32,7 +32,7 @@
 #sidenote {
     background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/cork-board.png);
     padding: 1px 20px;
-    text-shadow: #050a24 2px 2px;
+    text-shadow: #050a24 1px 1px, #050a24 2px 2px;
     border: 2px solid white;
   }
 
