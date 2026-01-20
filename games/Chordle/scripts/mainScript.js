@@ -14,17 +14,17 @@ answers = [
 	['Db3', 'G3' , 	'F4' , 	'B4' , 	'Eb5' 	,"Db9b5"],
 	['E3' ,	'A3' , 	'D4' , 	'G4' , 	'B4' 	,"Em11 - so what voicing"],
 	['Bb3', 'Eb4',	'C5' , 	'F5' , 	'A5' 	,"Eb7#11"],
-	['F3' ,	'A3' , 	'Eb4',	'Ab4',	'Db5' 	,"F7(#9, b13)"],
+	['F3' ,	'A3' , 	'Eb4',	'Ab4',	'Db5' 	,"F7(b13, #9)"],
 	['Ab3', 'Db4',	'Gb4',	'B4' , 	'E5' 	,"Abm11? - Stack of fourths"],
 	['E3' ,	'G4' , 	'B4' , 	'Eb5',	'Gb5' 	,"EmM9 - James Bond"],
-	['Eb3', 'G4' , 	'Bb4',	'Db5',	'E5' 	,"E7b9"],
+	['Eb3', 'G4' , 	'Bb4',	'Db5',	'E5' 	,"Eb7b9"],
 	['Ab4', 'Db5',	'Eb5',	'G5' , 	'Bb5' 	,"Am9sus4"],
 	['Gb3', 'E4' , 	'Ab4',	'Bb4',	'D5' 	,"Gb9#5"],
-	['Gb3', 'Bb3',	'E4' , 	'G4' , 	'C5' 	,"C/F# or F#7(b9,#11)- Petrushka chord (but without the C# cause it's actually a 6 note chord lol)"],
+	['Gb3', 'Bb3',	'E4' , 	'G4' , 	'C5' 	,"C/F# or F#7(b9,#11)- Petrushka chord (but without the C# cause that's a 6 note chord lol)"],
 	['G3' ,	'F4' , 	'A4' , 	'C5' , 	'E5' 	,"G13"],
 	['D4' ,	'F4' , 	'Ab4',	'C5' , 	'E5' 	,"Dm9b5"],
 	['C3' ,	'Bb3',	'E4' , 	'Ab4',	'D5' 	,"C9#5"],
-	['G3' ,	'Bb3',	'Db4',	'F4' , 	'Gb5' 	,"Gm7b5b9"]
+	['G3' ,	'Bb3',	'Db4',	'F4' , 	'Gb5' 	,"Gm7b9b5"]
 	//['', '', '', '', '']	
 ];
 
@@ -66,7 +66,6 @@ document.querySelectorAll('.key').forEach(item => {
 		document.getElementById((y + 1) + '-' + (x + 1)).innerText=t.id;
 		x++;	
 	}
-
   })
 })
 
@@ -76,6 +75,10 @@ var name = event.key;
 	var code = event.code;
 	if (name === 'Backspace') {
 		backspace();
+		return;
+	}
+	if (name === 'Enter') {
+		submit();
 		return;
 	}
 }, false);
@@ -95,63 +98,98 @@ function submit(){
 	// valid guess must have all notes filled
 	if(x == COLUMNS){
 		answerNoteNames = answers[currentAnswer].map(string => string.slice(0, -1));
-		for (let i = 0; i < COLUMNS; i++) {
-			var currentNote = guesses[y][i];
-			var currentNoteName = currentNote.slice(0, -1);
-			var noteGuessBox = document.getElementById((y + 1) + '-' + (i + 1));
+		
+		// valid guess must have 5 unique pitches
+		// if set is shorter, then there are repeat pitches
+		checkSet = new Set(guesses[y]);		
+		if(checkSet.size === guesses[y].length){
+			for (let i = 0; i < COLUMNS; i++) {
+				var currentNote = guesses[y][i];
+				var currentNoteName = currentNote.slice(0, -1);
+				var noteGuessBox = document.getElementById((y + 1) + '-' + (i + 1));
+				
+				keys = document.getElementsByClassName(currentNoteName);
+				// if right position and right octave (green)
+				if(currentNote == answers[currentAnswer][i]){
+					// if D4 is correct, set all other D's to gray
+					Array.prototype.forEach.call(keys, function(key) {
+						key.style.fill = colorWrong;
+					});
+					
+					noteGuessBox.style.background=colorCorrect;
+					document.getElementById(currentNote).style.fill = colorCorrect;
+				} 
+				// if wrong position but right octave (blue)
+				else if(answers[currentAnswer].includes(currentNote)){
+					// if D4 is right octave, set all other D's to gray
+					Array.prototype.forEach.call(keys, function(key) {
+						key.style.fill = colorWrong;
+					});
+					
+					noteGuessBox.style.background = colorRightOctave;
+					document.getElementById(currentNote).style.fill = colorCorrect;
+				} 
+				// if right position but wrong octave (yellow)
+				else if(answerNoteNames.includes(currentNoteName)){
+					noteGuessBox.style.background = colorRightPosition;
+					// If D4 is yellow, then its not D4 (gray) but D3 and D5 are possible (yellow)
+					Array.prototype.forEach.call(keys, function(key) {
+						key.style.fill = colorRightPosition;
+					});
+					document.getElementById(currentNote).style.fill = colorWrong;
+				}
+				// note is not in the chord
+				else{
+					noteGuessBox.style.background = colorWrong;
+					document.getElementById(currentNote).style.fill = colorWrong;
+					Array.prototype.forEach.call(keys, function(key) {
+						key.style.fill = colorWrong;
+					});
+				}
+			}
 			
-			// if right position and right octave (green)
-			if(currentNote == answers[currentAnswer][i]){
-				// if D4 is correct, set all other D's to gray
-				keys = document.getElementsByClassName(currentNoteName);
-				Array.prototype.forEach.call(keys, function(key) {
-					key.style.fill = colorWrong;
-				});
-				
-				noteGuessBox.style.background=colorCorrect;
-				document.getElementById(currentNote).style.fill = colorCorrect;
-			} 
-			// if wrong position but right octave (blue)
-			else if(answers[currentAnswer].includes(currentNote)){
-				// if D4 is right octave, set all other D's to gray
-				keys = document.getElementsByClassName(currentNoteName);
-				Array.prototype.forEach.call(keys, function(key) {
-					key.style.fill = colorWrong;
-				});
-				
-				noteGuessBox.style.background = colorRightOctave;
-				document.getElementById(currentNote).style.fill = colorRightOctave;
-			} 
-			// if right position but wrong octave (yellow)
-			else if(answerNoteNames.includes(currentNoteName)){
-				noteGuessBox.style.background = colorRightPosition;
-				document.getElementById(currentNote).style.fill = colorRightPosition;
+			let s = guesses[y].toString()
+			// if all correct
+			if(guesses[y].toString() === answer){
+				win(answers[currentAnswer][5]);
+				y = 99;	// set out of bounds because u won
+				return;
 			}
-			// note is not in the chord
-			else{
-				noteGuessBox.style.background = colorWrong;
-				document.getElementById(currentNote).style.fill = colorWrong;
-
-				keys = document.getElementsByClassName(currentNoteName);
-				Array.prototype.forEach.call(keys, function(key) {
-					key.style.fill = colorWrong;
+			x = 0;
+			y++;
+			// loss
+			if(y >= 5){				
+				var popup = document.getElementById("alert-lose");
+				popup.style.visibility = "visible";
+				var popupText = document.getElementById("alert-lose-text");
+				popupText.innerText = "Better luck next time! The chord was: " + answers[currentAnswer][5];
+				
+				var i = 0;
+				var notes = document.getElementsByClassName("lose-note");
+				Array.prototype.forEach.call(notes, function(note) {
+					note.innerText = answers[currentAnswer][i];
+					i += 1;
 				});
 			}
 		}
-
-		let s = guesses[y].toString()
-		// if all correct
-		if(guesses[y].toString() === answer){
-			win(answers[currentAnswer][5]);
-			y = 99;	// set out of bounds because u won
+		else{
+			alert("Each chord has 5 unique pitches! Make sure your guess does too!");
 		}
-		x = 0;
-		y++;
+		
 	}
 }
 
 function win(comment){
-	alert("You got it! That chord was: " + comment);
+	var popup = document.getElementById("alert-win");
+	popup.style.visibility = "visible";
+	var popupText = document.getElementById("alert-win-text");
+	popupText.innerText = "You got it! The chord was: " + comment;
+	var i = 0;
+	var notes = document.getElementsByClassName("win-note");
+	Array.prototype.forEach.call(notes, function(note) {
+		note.innerText = answers[currentAnswer][i];
+		i += 1;
+	});
 }
 
 
@@ -176,52 +214,4 @@ function respell(){
 	else {
 		document.getElementById((y + 1) + '-' + (x)).innerText = result[0] + octave;
 	}
-}
-
-
-document.getElementById("share").addEventListener("click", share);
-function share(){
-	var msg = "";
-
-	var square_list = document.querySelectorAll('.roundedSquare');
-	var square_array = [...square_list]; // convert to array
-	square_array.forEach(square => {
-		let color = square.style.color;
-		if(color == colorCorrect){
-			msg = msg.concat('gren');
-			alert("gren");
-		}
-
-		/*
-		switch (square){
-			case colorCorrect:
-				msg = msg.concat('gren');
-				alert("gren");
-				break;
-			default:
-				msg += "gray";
-		}
-		*/
-	});
-	alert(msg);
-
-
-	/*
-	document.querySelectorAll('.roundedSquare').forEach(item => {
-		if(item.style.background == colorCorrect){
-			alert("green");
-		}
-
-
-		switch (item){
-			case colorCorrect:
-				msg += 'gren';
-				alert("gren");
-				break;
-			default:
-				msg += "gray";
-		}
-	});
-	*/
-
 }

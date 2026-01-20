@@ -1,31 +1,36 @@
-@font-face{
-	font-family: LexendDeca;
-	src: url(https://fonts.gstatic.com/s/lexenddeca/v15/K2FifZFYk-dHSE0UPPuwQ7CrD94i-NCKm-U48M1wqxnD.woff2) format('woff2');
-}
-
 html, body {
 	background-color:rgb(24, 26, 27) !important;
 	color:rgb(244, 244, 255) !important;
 
 	font-family: LexendDeca, sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 300;
+	font-weight: 200;
 	font-size: 20px;
 
 
 	max-width:600px;
 	align-content: center;
-	margin: auto
+	margin: auto;
+	padding-bottom: 20px;
+}
+
+.link {
+  color: gray;
 }
 
 header{
 	width:100%;
 	align-content: center;
 	margin-bottom: 32px;
+	background:black;
+}
+
+#header-buttons{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
 }
 
 h1{
-	background:black;
 	font-size:40px;
 	text-align:center;
 
@@ -36,7 +41,12 @@ h1{
 button {
 	font-family: LexendDeca, sans-serif;
 	font-size:20px;
-
+	background-color: rgb(244, 244, 255);
+	color: #28292a;
+	border: none;
+	border-radius: 6px;
+	padding: 6px;
+	min-width: 35px;
 }
 
 .copyright{
@@ -48,8 +58,31 @@ button {
 
 }
 
+.popup{
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 620px;
+  background-color: rgb(24, 26, 27);
+  border-color: gray;
+  border-width: 2px;
+  border-style: solid;
+  padding: 5px 5px 0px 5px;
+}
+
+.alert > img{
+	height:150px;
+	width:auto;
+	margin: auto;
+	display: block;
+}
+
+
 #info > p,
-#info > button {
+#info > button,
+.alert > p {
 	text-align:center;
 	
 	margin-bottom: 16px;
@@ -81,14 +114,39 @@ rect:active{
 	text-align:center;
 }
 
-#guesses, #buttons, #piano {
+#guesses, #buttons {
 	display: flex;
 	justify-content: center;
+}
+
+#piano{
+  width: 100%;
+  height: auto;
+  max-width: 900px; /* optional */
 }
 
 .gridCol {
 	width: 360px;
 	height: 360px;
+
+	display: grid;
+	grid-template-columns: 62px 62px 62px 62px 62px;
+	grid-template-rows:    62px 62px 62px 62px 62px;
+
+	grid-gap: 10px;
+	color: #444;
+
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-right: 16px;
+	margin-left: 16px;
+
+	justify-content: center;
+}
+
+.answerGrid{
+	width: 600px;
+	height: 70px;
 
 	display: grid;
 	grid-template-columns: 62px 62px 62px 62px 62px;
@@ -112,29 +170,4 @@ rect:active{
 	margin-left: 16px;
 }
 
-
-
-/* POPUP */
-
-.cookie-banner {
-	position: fixed;
-	bottom: 2vw;
-	left: 20vw;
-	width: 60vw;
-	padding: 5px 5px;
-	background-color: #eee;
-	border-radius: 5px;
-	color: black;
-	text-align: center;
-	align-items: center;
-	z-index: 1000;
-}
-
-.close {
-	height: 25px;
-	width: 25px;
-	background-color: #777;
-	color: white;
-	border-radius: 2px;
-}
 
