@@ -65,16 +65,25 @@
             ["im definitely going to get lost", "oh well. that just means you'll have to be with me forever :)", "that sounds awful", "that sounds great"],
 
             ["that sounds awful","do you mean that o(╥﹏╥)o", "i do", "i was just teasing, sorry", "convince me otherwise"],
-            ["i do", "well i know a witch thatll break your fridge so dont make me tattle", "you look like a rat"],
+            
+			["i do", "well i know a witch thatll break your fridge so dont make me tattle", "you look like a rat"],
             ["you look like a rat", "I AM VERY CUTE DONT SAY THAT", "rat"],
             ["rat", "IM TELLING MY WITCH GIRLFRIEND ๐·°(⋟﹏⋞)°·๐", "hahahahaha"],
+            ["hahahahaha", "SHE'S THE STRONGEST DEER WITCH OUT THERE I SAW HER BENCH 120", "that's not that impressive", "oh sick"],
+			
+            ["oh sick", "ikr she's the coolest :))", "happy for you"],
+            ["happy for you", "THANK YOU I LOVE HER you know, you her and i should play board games sometime", "what game?"],
+            ["what game?", "andromedas edge!! it'll only take like 5 hours", "maybe another time..."],
+			
+            ["that's not that impressive", "YOU'RE JUST JEALOUS!!!", "uh huh"],
+            ["uh huh", "I'M NEVER TALKING TO YOU AGAIN!!!", "yeah never, not until i press the reset button"],
+
+            ["i was just teasing, sorry", "i appreciate the honesty, as such, i bestow onto you a great honor, choose a color", "#d95455", "#f6bd60", "#5ec6ba", "#ffb4c5", "oh thats cool thanks"],
+            ["oh thats cool thanks", "you're welcome \(*T▽T*)/"],
 
             ["convince me otherwise", "<img src='michael.jpg", "what is that"],
             ["what is that", "proof that im cool?? hes so funny", "..."],
             ["...", "???", "im never talking to you again"],
-
-            ["i was just teasing, sorry", "i appreciate the honesty, as such, i bestow onto you a great honor, choose a color", "#d95455", "#f6bd60", "#5ec6ba", "#ffb4c5", "oh thats cool thanks"],
-            ["oh thats cool thanks", "you're welcome \(*T▽T*)/"],
 
             ["that sounds great","yea! ill look for some pillows", "cool :) ill just wait for you to come back"],
 
