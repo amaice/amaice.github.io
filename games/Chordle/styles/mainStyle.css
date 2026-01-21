@@ -9,7 +9,6 @@ html, body {
 	max-width:600px;
 	align-content: center;
 	margin: auto;
-	padding-bottom: 20px;
 }
 
 a {
@@ -35,7 +34,7 @@ footer{
 	min-height: 50px;	
 	text-align: center;
 	align-content: center;
-	
+	padding-bottom: 20px;
 }
 
 #header-buttons{
