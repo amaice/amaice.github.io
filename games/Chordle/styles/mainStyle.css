@@ -2,10 +2,9 @@ html, body {
 	background-color:rgb(24, 26, 27) !important;
 	color:rgb(244, 244, 255) !important;
 
-	font-family: LexendDeca, sans-serif;
+	font-family: Lexend Deca, sans-serif;
 	font-weight: 200;
 	font-size: 20px;
-
 
 	max-width:600px;
 	align-content: center;
@@ -13,8 +12,8 @@ html, body {
 	padding-bottom: 20px;
 }
 
-.link {
-  color: gray;
+a {
+	color: gray;
 }
 
 header{
@@ -22,6 +21,21 @@ header{
 	align-content: center;
 	margin-bottom: 32px;
 	background:black;
+	min-height: 50px;
+}
+
+body{
+	min-height: 100vh;
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+footer{
+	min-height: 50px;	
+	text-align: center;
+	align-content: center;
+	
 }
 
 #header-buttons{
@@ -39,7 +53,7 @@ h1{
 }
 
 button {
-	font-family: LexendDeca, sans-serif;
+	font-family: Lexend Deca, sans-serif;
 	font-size:20px;
 	background-color: rgb(244, 244, 255);
 	color: #28292a;
@@ -49,27 +63,18 @@ button {
 	min-width: 35px;
 }
 
-.copyright{
-	font-size:16px;!important;
-}
-
-.copyright > a{
-	color:rgb(37, 150, 190) !important;
-
-}
-
 .popup{
-  visibility: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 620px;
-  background-color: rgb(24, 26, 27);
-  border-color: gray;
-  border-width: 2px;
-  border-style: solid;
-  padding: 5px 5px 0px 5px;
+	visibility: hidden;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 620px;
+	background-color: rgb(24, 26, 27);
+	border-color: gray;
+	border-width: 2px;
+	border-style: solid;
+	padding: 5px 5px 0px 5px;
 }
 
 .alert > img{
@@ -120,9 +125,9 @@ rect:active{
 }
 
 #piano{
-  width: 100%;
-  height: auto;
-  max-width: 900px; /* optional */
+	width: 100%;
+	height: auto;
+	max-width: 900px; /* optional */
 }
 
 .gridCol {
