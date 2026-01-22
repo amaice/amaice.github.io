@@ -42,17 +42,16 @@
 
 
 /*MAIN*/
+main{
+    max-width: 900px;
+    margin: auto;
+}
 body {
     font-family: 'LadylikeBB', sans-serif;
     background-image: url('media/background_clouds.png');
     color: white;
     font-size: 28px;
-    max-width: 1000px;
-    margin: auto;
-
-}
-body > div{
-    padding: 0px 15px 15px 15px;
+	margin: 0px 0px 0px 0px;
 }
 
 .center {
@@ -95,11 +94,11 @@ header, footer {
 
 header{
     background-size: 2500px;
-    margin: 25px 0px 0px 0px;
 }
 footer{
     background-size: 2000px;
-    margin: 15px 15px 0px 15px;
+    padding: 15px 0px;
+	margin-top: 50px;
 }
 
 
@@ -129,21 +128,22 @@ a{
 .nav {
   margin: 0;
   padding: 0;
-  list-style: none;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
 }
 
 .nav li {
-  float: left;
   display: block;
   background: #4B4B4B;
   position: relative;
   z-index: 500;
-  margin: 0 1px;
 }
 
 .nav li a, .nav li div {
   display: block;
-  padding: 6px 20px;
+  padding: 10px 20px;
   font-weight: 700; /*bold*/
   text-decoration: none;
   color: #fff;
