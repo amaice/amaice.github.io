@@ -2,7 +2,7 @@
     // Load navigation first
     $("#header-placeholder").load("/header.html", function () {
         // Submenus
-        $('.nav li').mouseenter(function () {
+        $('#con li').mouseenter(function () {
             $(this).children('ul').stop(true, true).slideDown("fast");
         }).mouseleave(function () {
             $(this).children('ul').stop(true, true).slideUp("fast");

@@ -1,8 +1,3 @@
-:root {
-  --response-color: greenyellow;
-}
-
-
 /*MAIN*/
 main{
     max-width: 900px;
@@ -10,7 +5,7 @@ main{
 }
 body {
     font-family: 'LadylikeBB', sans-serif;
-    background-image: url('media/background_clouds.png');
+    background: black;
     color: white;
     font-size: 28px;
 	margin: 0px 0px 0px 0px;
@@ -36,16 +31,6 @@ h1{
 
 h2 {
     font-size: 30px;
-}
-
-.codey-text, .codey-text-response{
-    font-family: 'Comic Mono', monospace;
-    font-size: 20px;
-    padding: 8px 8px 0px;
-}
-
-.codey-text-response{
-    color: var(--response-color);
 }
 
 header, footer {
@@ -74,107 +59,66 @@ a{
     display: inline-block;
 }
 
-
-#conversation-container button, .conversationButton{
-    font-family:"Pumpkin Cheesecake", sans-serif;
-    font-size: 24px;
-    float:left; 
-    margin-right: 10px;
+#con{
+  margin:50px;
+  
 }
-
-
+#con>div{
+  position:relative;
+  height:150px;
+}
+#con>div:before {
+    float: left;
+    content: "\00a0";
+    width: 150px;
+    height: 151px;
+}
+#con>div>div{
+  display:inline-block;
+  height:150px;
+  width:150px;
+  color:#fff;
+}
 
 
 /* thank u granneman.com */
 /* pull down menu */
-.nav {
+.con {
   margin: 0;
   padding: 0;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
   width: 650px;
 }
 
-.nav li {
+#con li {
   display: block;
-  background: #4B4B4B;
   position: relative;
-  z-index: 500;
 }
 
-.nav li a, .nav li div {
-  display: block;
+#con li a, #con li div {
   padding: 10px 20px;
   font-weight: 700; /*bold*/
-  text-decoration: none;
-  color: #fff;
   text-align: center;
 }
 
-.nav ul {
-  position: absolute;
-  left: 0;
-  display: none;
-  margin: 0 0 0 -1px;
-  padding: 0;
-  list-style: none;
+#con li div {
+  font-size: 40px;
 }
 
-.nav ul li {
-  float: left;
-  border-top: 1px solid #fff;
-  width: 100%;
+#con ul {
+  background: #4B4B4B;
+  position: absolute;
+  display: none;
+  padding: 0;
+  z-index: 500;
+}
+
+.con{display: none;}
+
+#con ul li {
   white-space: nowrap;
 }
 
-.nav ul a, .nav ul div {
+#con ul a, #con ul div {
   display: block;
-  font-weight: 400; /*normal*/
-  padding:  6px 10px;
-  color: #fff;
-  text-align: left;
-}
-
-.nav a, .nav div{
-    text-align: center;
-    background-image: repeating-linear-gradient(#050543, black);
-    border: 1.5px solid white;
-}
-
-.nav a:hover {
-    background-image: repeating-linear-gradient(#7842f5, black);
-    font-weight: bold;
-}
-
-
-
-
-/* POPUP */
-
-.cookie-banner {
-    position: fixed;
-    bottom: 2vw;
-    left: 20vw;
-    width: 60vw;
-    padding: 5px 5px;
-    background-color: #eee;
-    border-radius: 5px;
-    color: black;
-    text-align: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-a.cookie-link{
-    color:blue;
-    font-weight:bold;
-}
-
-.close {
-    height: 25px;
-    width: 25px;
-    background-color: #777;
-    color: white;
-    border-radius: 2px;
 }
