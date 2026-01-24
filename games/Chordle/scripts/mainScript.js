@@ -8,23 +8,26 @@ guesses = [
 
 // chords must be written in flats (no Cb or Fb)
 answers = [
-	['F3' ,	'C4' ,	'G4' ,	'A4' ,	'E5' 	,"The famous Fmaj9 from spirited away"],
-	['B3' ,	'Bb4',	'Db5',	'Eb5',	'Gb5' 	,"Bmaj9 - giant steps"],
+	['F3' ,	'C4' ,	'G4' ,	'A4' ,	'E5' 	,"The famous F△9 from spirited away"],
+	['B3' ,	'Bb4',	'Db5',	'Eb5',	'Gb5' 	,"B△9 - giant steps"],
 	['C3' ,	'G3' , 	'D4' , 	'A4' , 	'E5' 	,"C6/9 - stack of fifths"],
 	['Db3', 'G3' , 	'F4' , 	'B4' , 	'Eb5' 	,"Db9b5"],
-	['E3' ,	'A3' , 	'D4' , 	'G4' , 	'B4' 	,"Em11 - so what voicing"],
+	['E3' ,	'A3' , 	'D4' , 	'G4' , 	'B4' 	,"E-11 - so what voicing"],
 	['Bb3', 'Eb4',	'C5' , 	'F5' , 	'A5' 	,"Eb7#11"],
 	['F3' ,	'A3' , 	'Eb4',	'Ab4',	'Db5' 	,"F7(b13, #9)"],
-	['Ab3', 'Db4',	'Gb4',	'B4' , 	'E5' 	,"Abm11? - Stack of fourths"],
-	['E3' ,	'G4' , 	'B4' , 	'Eb5',	'Gb5' 	,"EmM9 - James Bond"],
+	['Ab3', 'Db4',	'Gb4',	'B4' , 	'E5' 	,"Ab-11? - Stack of fourths"],
+	['E3' ,	'G4' , 	'B4' , 	'Eb5',	'Gb5' 	,"E-△9 - James Bond"],
 	['Eb3', 'G4' , 	'Bb4',	'Db5',	'E5' 	,"Eb7b9"],
-	['Ab4', 'Db5',	'Eb5',	'G5' , 	'Bb5' 	,"Am9sus4"],
+	['Ab4', 'Db5',	'Eb5',	'G5' , 	'Bb5' 	,"A-9sus4"],
 	['Gb3', 'E4' , 	'Ab4',	'Bb4',	'D5' 	,"Gb9#5"],
-	['Gb3', 'Bb3',	'E4' , 	'G4' , 	'C5' 	,"C/F# or F#7(b9,#11)- Petrushka chord (but without the C# cause that's a 6 note chord lol)"],
+	['Gb3', 'Bb3',	'E4' , 	'G4' , 	'C5' 	,"F#7(b9,#11) or C/F#, the Petrushka chord without a C# cause that's a 6 note chord lol"],
 	['G3' ,	'F4' , 	'A4' , 	'C5' , 	'E5' 	,"G13"],
-	['D4' ,	'F4' , 	'Ab4',	'C5' , 	'E5' 	,"Dm9b5"],
+	['D4' ,	'F4' , 	'Ab4',	'C5' , 	'E5' 	,"D-9b5"],
 	['C3' ,	'Bb3',	'E4' , 	'Ab4',	'D5' 	,"C9#5"],
-	['G3' ,	'Bb3',	'Db4',	'F4' , 	'Gb5' 	,"Gm7b9b5"]
+	['G3' ,	'Bb3',	'Db4',	'F4' , 	'Gb5' 	,"G-7(b9, b5)"],
+	['Db4', 'G4', 'C5', 'F5', 'Bb5', "Quartal Db△13#11"],
+	['Ab3', 'B3', 'D4', 'E4', 'G4', "Rootless Bb13(b9, b5)"],
+	['A3', 'F4', 'G4', 'C5', 'E5', "Fmaj9/A"]
 	//['', '', '', '', '']	
 ];
 
