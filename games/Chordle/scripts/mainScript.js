@@ -1,4 +1,4 @@
-guesses = [
+	var guesses = [
 	[],
 	[],
 	[],
@@ -7,7 +7,7 @@ guesses = [
 ];
 
 // chords must be written in flats (no Cb or Fb)
-answers = [
+var answers = [
 	['F3' ,	'C4' ,	'G4' ,	'A4' ,	'E5' 	,"The famous F△9 from spirited away"],
 	['B3' ,	'Bb4',	'Db5',	'Eb5',	'Gb5' 	,"B△9 - giant steps"],
 	['C3' ,	'G3' , 	'D4' , 	'A4' , 	'E5' 	,"C6/9 - stack of fifths"],
@@ -21,7 +21,7 @@ answers = [
 	['Ab4', 'Db5',	'Eb5',	'G5' , 	'Bb5' 	,"A-9sus4"],
 	['Gb3', 'E4' , 	'Ab4',	'Bb4',	'D5' 	,"Gb9#5"],
 	['Gb3', 'Bb3',	'E4' , 	'G4' , 	'C5' 	,"F#7(b9,#11) or C/F#, the Petrushka chord without a C# cause that's a 6 note chord lol"],
-	['G3' ,	'F4' , 	'A4' , 	'C5' , 	'E5' 	,"G13"],
+	['G3' ,	'F4' , 	'A4' , 	'C5' , 	'E5' 	,"G13sus"],
 	['D4' ,	'F4' , 	'Ab4',	'C5' , 	'E5' 	,"D-9b5"],
 	['C3' ,	'Bb3',	'E4' , 	'Ab4',	'D5' 	,"C9#5"],
 	['G3' ,	'Bb3',	'Db4',	'F4' , 	'Gb5' 	,"G-7(b9, b5)"],
@@ -31,7 +31,7 @@ answers = [
 	//['', '', '', '', '']	
 ];
 
-enharmonics = ['C#/Db',	'D#/Eb', 'F#/Gb', 'G#/Ab', 'A#/Bb'];
+var enharmonics = ['C#/Db',	'D#/Eb', 'F#/Gb', 'G#/Ab', 'A#/Bb'];
 
 var dayOfLaunch = new Date("04/03/2022");
 var today = new Date();
@@ -46,7 +46,7 @@ var y = 0;
 
 var COLUMNS = 5;
 
-answer = "";
+var answer = "";
 let temp_answer;
 temp_answer = answers[currentAnswer].slice();	// shallow copy!
 temp_answer.pop() // remove comment
@@ -57,25 +57,52 @@ var colorRightOctave = '#55cccc';
 var colorRightPosition = '#ccc555';
 var colorWrong = '#444448';
 
+
+$( document ).ready(function() {
+	// check if puzzle today was played already
+	// if so, automatically do the same guesses so it "remembers" your progress
+		if (Cookies.get("lastChordDayAttempted") === answer){
+			let cookie_guesses = [
+				Cookies.get("guess1"),
+				Cookies.get("guess2"),
+				Cookies.get("guess3"),
+				Cookies.get("guess4"),
+				Cookies.get("guess5")
+			]
+
+			for(let i = 0; i < cookie_guesses.length; i++){
+				let cookie_guess = cookie_guesses[i].split(",");
+				if(cookie_guess.length > 1 && y < COLUMNS){
+					for (let guess = 0; guess < cookie_guess.length; guess++){
+						guesses[y].push(cookie_guess[guess]);
+						document.getElementById((y + 1) + '-' + (x + 1)).innerText= cookie_guess[guess];
+						x++;
+					}
+					submit()
+				}
+			}
+		}
+});
+
 // create onclicklistener for every element with the class 'key'
 document.querySelectorAll('.key').forEach(item => {
-  item.addEventListener('click', (elem) => {
+	item.addEventListener('click', click);
+})
+function click(elem){
 	var t = elem.target;
-    //console.log("clicked by " + t.id);
-	
-	// if not out of bounds 
+	//console.log("clicked by " + t.id);
+
+	// if not out of bounds
 	if (x != COLUMNS){
 		guesses[y].push(t.id);
 		document.getElementById((y + 1) + '-' + (x + 1)).innerText=t.id;
-		x++;	
+		x++;
 	}
-  })
-})
+}
 
 // Add event listener on keydown
 document.addEventListener('keydown', (event) => {
 var name = event.key;
-	var code = event.code;
 	if (name === 'Backspace') {
 		backspace();
 		return;
@@ -97,21 +124,21 @@ function backspace(){
 }
 
 document.getElementById("submit").addEventListener("click", submit);
-function submit(){
 	// valid guess must have all notes filled
+function submit(){
 	if(x == COLUMNS){
-		answerNoteNames = answers[currentAnswer].map(string => string.slice(0, -1));
+		var answerNoteNames = answers[currentAnswer].map(string => string.slice(0, -1));
 		
 		// valid guess must have 5 unique pitches
 		// if set is shorter, then there are repeat pitches
-		checkSet = new Set(guesses[y]);		
+		var checkSet = new Set(guesses[y]);
 		if(checkSet.size === guesses[y].length){
 			for (let i = 0; i < COLUMNS; i++) {
 				var currentNote = guesses[y][i];
 				var currentNoteName = currentNote.slice(0, -1);
 				var noteGuessBox = document.getElementById((y + 1) + '-' + (i + 1));
 				
-				keys = document.getElementsByClassName(currentNoteName);
+				var keys = document.getElementsByClassName(currentNoteName);
 				// if right position and right octave (green)
 				if(currentNote == answers[currentAnswer][i]){
 					// if D4 is correct, set all other D's to gray
@@ -130,7 +157,7 @@ function submit(){
 					});
 					
 					noteGuessBox.style.background = colorRightOctave;
-					document.getElementById(currentNote).style.fill = colorCorrect;
+					document.getElementById(currentNote).style.fill = colorRightOctave;
 				} 
 				// if right position but wrong octave (yellow)
 				else if(answerNoteNames.includes(currentNoteName)){
@@ -150,8 +177,7 @@ function submit(){
 					});
 				}
 			}
-			
-			let s = guesses[y].toString()
+
 			// if all correct
 			if(guesses[y].toString() === answer){
 				win(answers[currentAnswer][5]);
@@ -161,18 +187,8 @@ function submit(){
 			x = 0;
 			y++;
 			// loss
-			if(y >= 5){				
-				var popup = document.getElementById("alert-lose");
-				popup.style.visibility = "visible";
-				var popupText = document.getElementById("alert-lose-text");
-				popupText.innerText = "Better luck next time! The chord was: " + answers[currentAnswer][5];
-				
-				var i = 0;
-				var notes = document.getElementsByClassName("lose-note");
-				Array.prototype.forEach.call(notes, function(note) {
-					note.innerText = answers[currentAnswer][i];
-					i += 1;
-				});
+			if(y >= 5){
+				lose(answers[currentAnswer][5]);
 			}
 		}
 		else{
@@ -182,17 +198,47 @@ function submit(){
 	}
 }
 
+function lose(comment){
+	var popup = document.getElementById("alert-lose");
+	popup.style.visibility = "visible";
+	var popupText = document.getElementById("alert-lose-text");
+	popupText.innerText = "Better luck next time! The chord was: " + comment;
+
+	var i = 0;
+	var notes = document.getElementsByClassName("lose-note");
+	Array.prototype.forEach.call(notes, function(note) {
+		note.innerText = answers[currentAnswer][i];
+		i += 1;
+	});
+
+	// only update cookies if it was the first time doing the puzzle
+	if(Cookies.get("lastChordDayAttempted") !== answer){
+		Cookies.set("lastChordDayAttempted", answer, { path: '' });
+		updateCookies(false);
+	}
+	updateStats();
+}
+
 function win(comment){
 	var popup = document.getElementById("alert-win");
 	popup.style.visibility = "visible";
 	var popupText = document.getElementById("alert-win-text");
 	popupText.innerText = "You got it! The chord was: " + comment;
+
 	var i = 0;
 	var notes = document.getElementsByClassName("win-note");
 	Array.prototype.forEach.call(notes, function(note) {
 		note.innerText = answers[currentAnswer][i];
 		i += 1;
 	});
+
+	// only update cookies if it was the first time doing the puzzle
+	if(Cookies.get("lastChordDayAttempted") !== answer){
+		Cookies.set("lastChordDayAttempted", answer, { path: '' });
+		// append cookie of win info
+		updateCookies(true);
+	}
+	updateStats();
 }
 
 
@@ -217,4 +263,86 @@ function respell(){
 	else {
 		document.getElementById((y + 1) + '-' + (x)).innerText = result[0] + octave;
 	}
+}
+
+function updateCookies(gameWasWon){
+	for (let i = 0; i < guesses.length; i++) {
+		Cookies.set('guess' + (i + 1).toString(), guesses[i].toString(), { path: '' });
+	}
+
+
+	// Update number of successes
+	let numSuccesses;
+	// if "numSuccesses" cookie exists
+	if (cookieExists("numSuccesses")) {
+		numSuccesses = parseInt(Cookies.get("numSuccesses"));
+	} else{
+		numSuccesses = 0;
+	}
+	if(gameWasWon){
+		numSuccesses++;
+	}
+	Cookies.set('numSuccesses', numSuccesses.toString(), { path: '' });
+
+
+	// Update number of games
+	let numGames;
+	// if "numGames" cookie exists
+	if (cookieExists("numGames")) {
+		numGames = parseInt(Cookies.get("numGames"));
+	} else{
+		numGames = 0;
+	}
+	numGames++;
+	Cookies.set('numGames', numGames.toString(), { path: '' });
+
+
+	let streak;
+	// if "streak" cookie exists
+	if (cookieExists("streak")) {
+		streak = parseInt(Cookies.get("streak"));
+	} else{
+		streak = 0;
+	}
+	if(gameWasWon){
+		streak++;
+	} else{
+		streak = 0;
+	}
+	Cookies.set('streak', streak.toString(), { path: '' });
+
+
+	let maxStreak;
+	// if "maxStreak" cookie exists
+	if (cookieExists("maxStreak")) {
+		maxStreak = parseInt(Cookies.get("maxStreak"));
+	} else {
+		maxStreak = 0;
+	}
+	if(streak > maxStreak){
+		maxStreak = streak;
+	}
+	Cookies.set('maxStreak', maxStreak.toString(), { path: '' });
+}
+
+function updateStats(){
+	let statNames = ["numGames", "streak", "maxStreak"]
+
+	for (let i = 0, len = statNames.length; i < len; i++) {
+		let els = document.getElementsByClassName(statNames[i])
+		Array.prototype.forEach.call(els, function(el){
+			el.innerHTML = Cookies.get(statNames[i]);
+		})
+	}
+
+	// format float as 0.33333 -> 33
+	let winPercentage = (parseFloat(Cookies.get("numSuccesses")) / parseFloat(Cookies.get("numGames")) * 100).toFixed(0);
+	els = document.getElementsByClassName("winPercentage")
+	Array.prototype.forEach.call(els, function(el){
+		el.innerHTML = winPercentage
+	})
+}
+
+function cookieExists(cookieName){
+	return document.cookie.split(";").some((item) => item.trim().startsWith(cookieName + "="));
 }

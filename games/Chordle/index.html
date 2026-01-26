@@ -6,6 +6,9 @@
 		<link href="styles/reset.css" rel="stylesheet"/>
 		<link href="styles/mainStyle.css" rel="stylesheet"/>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="module" src="scripts/js.cookie.js"></script>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -386,6 +389,32 @@
 		</div>
 		<div class="popup alert" id="alert-win">
 			<button type="button" id="close-win">x</button>
+
+			<p class="stats-title">STATS</p>
+			<div class="stats">
+				<div class="stat">
+					<p class="stat-num numGames">...</p>
+					<p class="stat-label">Played</p>
+				</div>
+
+				<div class="stat">
+					<p class="stat-num winPercentage">...</p>
+					<p class="stat-label">Win %</p>
+				</div>
+
+				<div class="stat">
+					<p class="stat-num streak">...</p>
+					<p class="stat-label">Current</p>
+					<p class="stat-label">Streak</p>
+				</div>
+
+				<div class="stat">
+					<p class="stat-num maxStreak">...</p>
+					<p class="stat-label">Max</p>
+					<p class="stat-label">Streak</p>
+				</div>
+			</div>
+
 			<p id="alert-win-text">You got it! The chord was: </p>
 			<div class="answerGrid">
 				<span class="win-note roundedCorner" style="background-color:#55c555"></span>
@@ -396,8 +425,35 @@
 			</div>
 			<img src="media/thumbsup.png"/>
 		</div>
+
 		<div class="popup alert" id="alert-lose">
 			<button type="button" id="close-lose">x</button>
+
+			<p class="stats-title">STATS</p>
+			<div class="stats">
+				<div class="stat">
+					<p class="stat-num numGames">...</p>
+					<p class="stat-label">Played</p>
+				</div>
+
+				<div class="stat">
+					<p class="stat-num winPercentage">...</p>
+					<p class="stat-label">Win %</p>
+				</div>
+
+				<div class="stat">
+					<p class="stat-num currentStreak">...</p>
+					<p class="stat-label">Current</p>
+					<p class="stat-label">Streak</p>
+				</div>
+
+				<div class="stat">
+					<p class="stat-num maxStreak">...</p>
+					<p class="stat-label">Max</p>
+					<p class="stat-label">Streak</p>
+				</div>
+			</div>
+
 			<p id="alert-lose-text">"Better luck next time! The chord was: " </p>
 			<div class="answerGrid">
 				<span class="lose-note roundedCorner"></span>

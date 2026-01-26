@@ -174,4 +174,31 @@ rect:active{
 	margin-left: 16px;
 }
 
+.stats-title{
+	margin-bottom: 4px !important;
+}
 
+.stats{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	padding-bottom: 24px;
+}
+
+.stat{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+		padding-left: 16px;
+		padding-right: 16px;
+}
+
+.stat-num{
+	font-size: 36px;
+
+}
+
+.stat-label{
+	font-size: 12px;
+	font-weight: 300;
+}
