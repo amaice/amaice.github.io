@@ -1,0 +1,95 @@
+body {
+	background-color: rgb(24, 26, 27);
+	color: rgb(244, 244, 255);
+
+	font-family: Inter, sans-serif;
+	font-weight: 200;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+header{
+	align-content: center;
+	background:black;
+	justify-content: flex-start;
+	height: 200px;
+}
+
+main{
+	margin: auto;
+	max-width:600px;
+	flex: 1;
+	padding: 36px;
+}
+
+footer{
+	min-height: 50px;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	height: 100px;
+}
+
+
+a {
+	color: gray;
+}
+
+.hand-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.winning-container{
+	display: grid;
+	justify-content: center;
+	grid-template-columns: auto auto auto;
+}
+
+.tile{
+	height: 100px;
+	width: auto;
+	margin: 4px;
+	background-image: url("/media/Front.svg");
+	background-size: contain;
+}
+
+.tile-div{
+	position: relative;
+}
+
+.tile-num{
+	position: absolute;
+	top: -16px;
+	right: 8px;
+	height: 4px;
+	text-shadow: black 2px 2px 2px;
+	color: red;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#header-buttons{
+	display: flex;
+	justify-content: center;
+}
+
+h1{
+	font-size:40px;
+	text-align:center;
+	font-weight: 600;
+}
+
+button {
+	font-family: Inter, sans-serif;
+	font-size:20px;
+	background-color: rgb(244, 244, 255);
+	color: #28292a;
+	border: none;
+	border-radius: 6px;
+	padding: 6px;
+	min-width: 35px;
+}
+
