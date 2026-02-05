@@ -216,7 +216,7 @@ function lose(comment){
 
 	// only update cookies if it was the first time doing the puzzle
 	if(Cookies.get("lastChordDayAttempted") !== answer){
-		Cookies.set("lastChordDayAttempted", answer, { path: '' });
+		Cookies.set("lastChordDayAttempted", answer, { expires: 400, path: '' });
 		updateCookies(false);
 	}
 	updateStats();
@@ -270,7 +270,7 @@ function respell(){
 
 function updateCookies(gameWasWon){
 	for (let i = 0; i < guesses.length; i++) {
-		Cookies.set('guess' + (i + 1).toString(), guesses[i].toString(), { path: '' });
+		Cookies.set('guess' + (i + 1).toString(), guesses[i].toString(), { expires: 400, path: '' });
 	}
 
 
@@ -285,7 +285,7 @@ function updateCookies(gameWasWon){
 	if(gameWasWon){
 		numSuccesses++;
 	}
-	Cookies.set('numSuccesses', numSuccesses.toString(), { path: '' });
+	Cookies.set('numSuccesses', numSuccesses.toString(), { expires: 400, path: '' });
 
 
 	// Update number of games
@@ -297,7 +297,7 @@ function updateCookies(gameWasWon){
 		numGames = 0;
 	}
 	numGames++;
-	Cookies.set('numGames', numGames.toString(), { path: '' });
+	Cookies.set('numGames', numGames.toString(), { expires: 400, path: '' });
 
 
 	let streak;
@@ -312,7 +312,7 @@ function updateCookies(gameWasWon){
 	} else{
 		streak = 0;
 	}
-	Cookies.set('streak', streak.toString(), { path: '' });
+	Cookies.set('streak', streak.toString(), { expires: 400, path: '' });
 
 
 	let maxStreak;
@@ -325,7 +325,7 @@ function updateCookies(gameWasWon){
 	if(streak > maxStreak){
 		maxStreak = streak;
 	}
-	Cookies.set('maxStreak', maxStreak.toString(), { path: '' });
+	Cookies.set('maxStreak', maxStreak.toString(), { expires: 400, path: '' });
 }
 
 function updateStats(){
