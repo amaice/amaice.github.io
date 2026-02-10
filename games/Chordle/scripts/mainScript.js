@@ -237,7 +237,7 @@ function win(comment){
 
 	// only update cookies if it was the first time doing the puzzle
 	if(Cookies.get("lastChordDayAttempted") !== answer){
-		Cookies.set("lastChordDayAttempted", answer, { path: '' });
+		Cookies.set("lastChordDayAttempted", answer, { expires: 400, path: '' });
 		// append cookie of win info
 		updateCookies(true);
 	}
