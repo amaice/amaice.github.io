@@ -1,12 +1,12 @@
 ﻿$(document).ready(function () {
     // Load navigation first
-    $("#header-placeholder").load("/header.html", function () {
-        // Submenus
-        $('#con li').mouseenter(function () {
-            $(this).children('ul').stop(true, true).slideDown("fast");
-        }).mouseleave(function () {
-            $(this).children('ul').stop(true, true).slideUp("fast");
-        });
+    $("#header-placeholder").load("/header.html", function () {});
+
+    // Submenus
+    $('#con .con-box > div').mouseenter(function () {
+        $(this).find('ul').stop(true, true).slideDown("fast");
+    }).mouseleave(function () {
+        $(this).find('ul').stop(true, true).slideUp("fast");
     });
 
     // banner

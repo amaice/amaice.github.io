@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>amaice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/mainScript.js"></script>
+    <link href="/mainStyle.css" rel="stylesheet" />
+    <link href="/sky.css" rel="stylesheet" />
+    <link href="meetAmaice.css" rel="stylesheet" />
+    <link href="/mainFonts.css" rel="stylesheet" />
+    <link href="/mainAnimations.css" rel="stylesheet" />
+    <link rel="icon" href="/media/amaice azzy icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi!! I'm amaice, artist, musician, and game developer. Fun things are fun! Enjoy my website!">
+    <meta property="og:image" content="/media/amaice azzy icon.png">
+    <meta property="og:image:width" content="256"><meta property="og:image:height" content="256">
+    <meta property="og:site_name" content="amaice"><meta property="og:title" content="amaice">
+    <meta property="og:ttl" content="600"><meta property="og:type" content="website">
+    <meta property="og:url" content="https://amaice.net/">
+</head>
+
+<div class="marquee" id="header-placeholder"></div>
+<main>
+
+    <div class="main-page">
+        <div class="amaice-container">
+            <br>
+            <img style="width: 300px" src="/media/pfpnew.gif" alt="the amaice">
+            <h1 style="text-align: left">me!</h1>
+            <button class="conversationButton" id="resetButton">Reset convo</button>
+            <br>
+        </div>
+
+        <div id="conversation-container" style="background-color:black">
+            <p id="amaice-hello" class="codey-text">> Hi all. Welcome to my domain of fun colors and wacky things! Please enjoy yourself and don't get lost ^^</p>
+            <button class="firstConversationButton" onclick="handleResponse('thanks weird girl')">thanks weird girl</button>
+            <button class="firstConversationButton" onclick="handleResponse('im definitely going to get lost')">im definitely going to get lost</button>
+
+        </div>
+
+        <div class="youtube-container">
+            <br>
+            <br>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Qx9yN-DYXcg?si=r2xb9tx_i8blpTvb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <ul class="nav" style="padding-left:100px">
+                <li>
+                    <a href="https://www.youtube.com/c/amaice">Check my Youtube!</a>
+                    <ul>
+                        <li><iframe width="560" height="315" src="https://www.youtube.com/embed/Qx9yN-DYXcg?si=r2xb9tx_i8blpTvb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="kitty-container">
+            <br>
+            <h1>LOOK AT THJIS KITTY</h1>
+            <img src="../media/kitty.webp" tabindex="0" alt="kitty!" id="kitty" class="center">
+            <h2>FUN FACT: cats jump when spook</h2>
+        </div>
+
+        <div class='cookie-banner'>
+            <p>
+                This website doesn't use <a class="cookie-link" href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>cookies</a>, so this will pop up every time.
+                <button class="close">x</button>
+            </p>
+        </div>
+    </div>
+</main>
+<footer class="marquee" style="text-shadow: 1px 1px black">
+    © <span id="year"></span> by Amy Funk
+</footer>
+</html>

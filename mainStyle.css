@@ -61,25 +61,35 @@ a{
 
 #con{
   margin:50px;
-  
+    display: block;
+    position: relative;
+    font-size: 40px;
 }
-#con>div{
+.con-box {
   position:relative;
-  height:150px;
+  height:140px;
 }
-#con>div:before {
+.con-box:before {
     float: left;
     content: "\00a0";
-    width: 150px;
+    width: 10%;
+    max-width: 150px;
     height: 151px;
 }
-#con>div>div{
+.con-box > div{
   display:inline-block;
   height:150px;
   width:150px;
   color:#fff;
+  background-color: black;
 }
 
+.con-box > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 /* thank u granneman.com */
 /* pull down menu */
@@ -90,35 +100,46 @@ a{
   width: 650px;
 }
 
-#con li {
-  display: block;
-  position: relative;
-}
-
-#con li a, #con li div {
+.con-box a, .con-box li div {
   padding: 10px 20px;
   font-weight: 700; /*bold*/
-  text-align: center;
 }
 
-#con li div {
-  font-size: 40px;
-}
-
-#con ul {
+.con-box ul {
+  list-style: none;
   background: #4B4B4B;
-  position: absolute;
+    border-radius: 25px;
+    border-color: white;
+    border-style: solid;
+  position: absolute !important;
   display: none;
   padding: 0;
   z-index: 500;
+  min-width: 500px;
+  align-self: flex-start;
 }
 
-.con{display: none;}
-
-#con ul li {
-  white-space: nowrap;
-}
-
-#con ul a, #con ul div {
+.con-box ul a, .con-box ul div {
   display: block;
+    font-size: 30px;
+}
+
+
+
+
+#socials{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+#socials > div{
+    display:inline-block;
+    text-align: center;
+    padding: 20px;
+}
+
+#socials img{
+    width: 50px;
+    height: 50px;
 }
