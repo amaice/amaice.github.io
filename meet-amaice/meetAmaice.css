@@ -1,0 +1,20 @@
+:root {
+    --response-color: greenyellow;
+}
+
+.codey-text, .codey-text-response{
+    font-family: 'Comic Mono', monospace;
+    font-size: 20px;
+    padding: 8px 8px 0px;
+}
+
+.codey-text-response{
+    color: var(--response-color);
+}
+
+#conversation-container button, .conversationButton{
+    font-family:"Pumpkin Cheesecake", sans-serif;
+    font-size: 24px;
+    float:left;
+    margin-right: 10px;
+}

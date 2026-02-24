@@ -1,0 +1,102 @@
+body {
+    font-family: 'LadylikeBB', sans-serif;
+    background-image: url('../media/background_clouds.png');
+    color: white;
+    font-size: 28px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+/* thank u granneman.com */
+/* pull down menu */
+.nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+}
+
+.nav li {
+    display: block;
+    background: #4B4B4B;
+    position: relative;
+    z-index: 500;
+}
+
+.nav li a, .nav li div {
+    display: block;
+    padding: 10px 20px;
+    font-weight: 700; /*bold*/
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.nav ul {
+    position: absolute;
+    left: 0;
+    display: none;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    list-style: none;
+}
+
+.nav ul li {
+    float: left;
+    border-top: 1px solid #fff;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.nav ul a, .nav ul div {
+    display: block;
+    font-weight: 400; /*normal*/
+    padding:  6px 10px;
+    color: #fff;
+    text-align: left;
+}
+
+.nav a, .nav div{
+    text-align: center;
+    background-image: repeating-linear-gradient(#050543, black);
+    border: 1.5px solid white;
+}
+
+.nav a:hover {
+    background-image: repeating-linear-gradient(#7842f5, black);
+    font-weight: bold;
+}
+
+
+
+
+/* POPUP */
+
+.cookie-banner {
+    position: fixed;
+    bottom: 2vw;
+    left: 20vw;
+    width: 60vw;
+    padding: 5px 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+a.cookie-link{
+    color:blue;
+    font-weight:bold;
+}
+
+.close {
+    height: 25px;
+    width: 25px;
+    background-color: #777;
+    color: white;
+    border-radius: 2px;
+}

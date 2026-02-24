@@ -1,0 +1,121 @@
+#con{
+    margin:50px;
+    display: block;
+    position: relative;
+    font-size: 40px;
+}
+.con-box {
+    position:relative;
+    height:140px;
+}
+.con-box:before {
+    float: left;
+    content: "\00a0";
+    width: 10%;
+    max-width: 150px;
+    height: 151px;
+}
+.con-box > div{
+    display:inline-block;
+    height:150px;
+    width:150px;
+    color:#fff;
+    background-color: black;
+}
+
+.con-box > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* thank u granneman.com */
+/* pull down menu */
+.con {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 650px;
+}
+
+.con-box a, .con-box li div {
+    padding: 10px 20px;
+    font-weight: 700; /*bold*/
+}
+
+.con-box ul {
+    list-style: none;
+    background: #4B4B4B;
+    border-radius: 25px;
+    border-color: white;
+    border-style: solid;
+    position: absolute !important;
+    display: none;
+    padding: 0;
+    z-index: 500;
+    min-width: 500px;
+    align-self: flex-start;
+}
+
+.con-box ul a, .con-box ul div {
+    display: block;
+    font-size: 30px;
+}
+
+
+
+
+#socials{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+#socials > div{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+}
+
+#socials > div::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("media/rainbow overlay.png");
+    background-size: 100px 100px;
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: darken;
+    transition: opacity 0.5s ease;
+}
+
+#socials > div:hover::after {
+    opacity: 1;
+    animation: rainbow 1s linear infinite;
+}
+
+#socials > div img,
+#socials > div div{
+    transition: transform .3s ease;
+}
+
+#socials > div:hover img,
+#socials > div:hover div {
+    transform: translate(0, -5px);
+}
+
+#socials img{
+    width: 50px;
+    height: 50px;
+}
+
+@keyframes rainbow {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100px 0
+    }
+}
