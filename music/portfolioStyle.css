@@ -85,11 +85,33 @@ a{
     color: #f6bd60;
 }
 
+.categories{
+    display: flex;
+    gap: 8px;
+}
+
+.active-tab{
+    border:  1px dashed #d95455;
+}
+.tab{
+    flex-grow: 1;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.tab:hover{
+    background: white;
+    color:black;
+}
+
+
 
 /* MOBILE RESPONSIVE DESIGN */
 @media screen and (max-width:769px){
     main{
         font-size:20px;
+    }
+    .subtitle{
         font-size: 18px;
     }
 }
