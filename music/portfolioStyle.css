@@ -1,0 +1,95 @@
+main{
+    max-width: 600px;
+    margin: 8px  auto;
+    font-size: 24px;
+}
+
+html{
+    margin: 0px 16px;
+}
+
+a{
+    text-decoration: underline;
+}
+
+.project{
+    padding: 8px;
+    margin: 32px 0px;
+    border-width: 1px;
+    border-color: #f6bd60;
+    border-style: dashed;
+}
+
+.dropdown-button{
+    cursor: pointer;
+}
+
+.dropdown{
+    margin-top: 8px;
+}
+
+.hover-hint,
+.project:has(.open){
+    border-color: #d95455;
+}
+
+.title{
+    font-weight: bold;
+    margin: 0px 2px;
+}
+
+.subtitle{
+    color: gray;
+    margin: 0px 2px;
+    font-size: 22px;
+}
+
+.amaiceComment{
+    display: none;
+}
+
+.description{
+    margin:  8px;
+}
+
+#amaice {
+    position: fixed;
+    bottom: 10px;
+    z-index: 1000;
+    
+    max-width: 600px;
+    min-height: 80px;
+
+    gap: 4px;
+    display: flex;
+}
+
+.dialogue, 
+#amaice img {
+    border: 1px solid white;
+    background-color: #000000dd;
+}
+
+#amaice img {
+    height: 50px;
+    width: 50px;
+}
+
+.dialogue{
+    padding: 10px;
+    overflow:auto;
+    max-height: 200px;
+}
+
+.amaiceName{
+    color: #f6bd60;
+}
+
+
+/* MOBILE RESPONSIVE DESIGN */
+@media screen and (max-width:769px){
+    main{
+        font-size:20px;
+        font-size: 18px;
+    }
+}
