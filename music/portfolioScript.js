@@ -16,6 +16,10 @@ $(document).ready(function () {
 
         $(".tab").removeClass("active-tab");
         $(this).addClass("active-tab");
+
+        // hide everything
+        $(".dropdown").slideUp();
+        amaice.hide();
     });
 
     // button functionality to open and close projects

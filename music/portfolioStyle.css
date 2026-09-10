@@ -12,6 +12,10 @@ a{
     text-decoration: underline;
 }
 
+.projects{
+    min-height: 300px;
+}
+
 .project{
     padding: 8px;
     margin: 32px 0px;
@@ -87,6 +91,7 @@ a{
 
 .categories{
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
