@@ -18,3 +18,10 @@
     float:left;
     margin-right: 10px;
 }
+
+.funny-link{
+    text-shadow: 4px 4px 0 blue;
+    text-decoration: underline;
+    color: #AAAAFF;
+    background-color: black;
+}

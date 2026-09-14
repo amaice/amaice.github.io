@@ -2,6 +2,7 @@
 main{
     max-width: 900px;
     margin: auto;
+    min-height: 400px;
 }
 body {
     font-family: 'LadylikeBB', sans-serif;
